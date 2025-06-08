@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="th" class="sr">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
+    <title>Hommie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/style.css" /> 
-    
+    <link rel="icon" type="image/ico" href="image/Gai.png">
+    <!--  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- นำเข้าฟอนต์ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -12,45 +16,170 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
-
-    <title>Hommie</title>
 </head>
-<body bgcolor="#070c0d" >
-<font color = "#e6fff5">
-  <div align = "center" >
-    <img src="image/cover_image.webp">
+<body style="background-color: rgb(14, 24, 21);">
+<!-- แถบนำทาง -->
+ <header>
+    <div class="navbar">
+        <div class="logo">
+          <a href="aboutme.html">Hommie</a>
+        </div>
+        <div>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+           <li class="dropdown">
+             <span class="dropbtn">Work &#9662;</span>
+             <ul class="sub-menu">
+               <li><a href="TrenditionalArt.html">Trenditional Art</a></li>
+                <li><a href="DigitalArt.html">Digital Art</a></li>
+                <li><a href="PixelArt.html">Pixel Art</a></li>
+                <li><a href="ToteBag.html">Tote Bag</a></li>
+              </ul>
+           </li>
+            <li><a href="commission.html">CMS</a></li>
+            <li><a href="#">OC</a></li>
+    </div>
+ </header>
+
+<!-- สไลด์ -->
+<div class="carousel-container">
+  <button class="carousel-arrow left" onclick="moveSlide(-1)">&#10094;</button>
+
+  <div class="carousel-track-wrapper">
+    <div class="carousel-track">
+      <a href="pageWe.html" class="carousel-slide">
+        <img src="image/We.jpg" />
+        <div class="caption">2024</div>
+      </a>
+      <a href="page2.html" class="carousel-slide">
+        <img src="image/Palatecolour.png" />
+        <div class="caption">2024</div>
+      </a>
+      <a href="page3.html" class="carousel-slide">
+        <img src="image/TheDancer.jpg" />
+        <div class="caption">2024</div>
+      <a href="page3.html" class="carousel-slide">
+        <img src="image/Mind1.jpg" />
+        <div class="caption">2024</div>
+      </a>
+
+      <!-- 🔁 Clone slide (slide 1 again) -->
+      <a href="pageWe.html" class="carousel-slide clone">
+        <img src="image/We.jpg" />
+        <div class="caption">clone</div>
+      </a>
+
+    </div>
   </div>
-  <p align = "right"> Mind (1) 060324
-</p>
 
-<div align = center>
-    <h1>NARIDA</h1>
-    <img src="image/ProfliePic.png">
-    <h2>Portfoilo</h2>
-    <h3>สวัสดีค่ะ หนูชื่อนริดา นามปากกาหอมมี่ ชอบวาดภาพประกอบและสร้างผลงานศิลปะต่าง ๆ</h3>
+  <button class="carousel-arrow right" onclick="moveSlide(1)">&#10095;</button>
 </div>
-
-    <nav hidden align="center">
-        <div class="container">
-            <div class="nav-con">
-                <div class="logo">
-                    <a href="#" ></a>
-                </div>
-                <ul class="menu">
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Commission</a></li>
-                    <li><a href="#">Artwork</a></li>
-                    <li><a href="#">Original Character</a></li>
-                </ul>
-            </div>
-        </div>    
-    </nav>
-
-<div align="center">
-    <h2>CONTACT</h2>
-    <h3> IG : @naridakh <br>
-        Facebook : Hom Mie <br>
-        Email : naridamanxd@gmail.com
-    </h3>
+<!-- โปรไฟล์ -->
+ <div>
+  <div class="profile-container">
+      <img src="image/ProfliePic.png" class="profliepic" >
+  </div>
+  <div class="introduce-container">
+      <h1 class="name-text">NARIDA</h1>
+      <h4 class="introduce-text">AKA. Hommie</h4>
+  </div>
 </div>
+<!-- js -->
+<script>
+let currentSlide = 0;
+const track = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.carousel-slide');
+const totalSlides = slides.length; // รวม slide clone ที่อยู่ท้ายสุด
+
+let autoSlideInterval;
+let isAutoSliding = false;
+
+// 👉 เริ่ม auto-slide
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    goToNextSlide();
+  }, 3000);
+}
+
+// 🛑 หยุด auto-slide
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+function moveToSlide(index) {
+  track.style.transition = 'transform 0.5s ease-in-out';
+  track.style.transform = `translateX(-${index * 100}%)`;
+  currentSlide = index;
+}
+
+// 🔁 ใช้เฉพาะ auto-slide ที่เลื่อนไปทางขวา
+function goToNextSlide() {
+  if (isAutoSliding) return;
+  isAutoSliding = true;
+  moveToSlide(currentSlide + 1);
+}
+
+// 🎯 หลังจากแอนิเมชันจบ
+track.addEventListener('transitionend', () => {
+  if (currentSlide === totalSlides - 1) {
+    // ถ้ากำลังอยู่ที่ slide clone (อันสุดท้าย) → กลับไป slide แรก
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(0)';
+    currentSlide = 0;
+
+    setTimeout(() => {
+      track.style.transition = 'transform 0.5s ease-in-out';
+    }, 50);
+  }
+
+  if (currentSlide < 0) {
+    // ถ้าหลุดไปก่อนภาพแรก (ตอนกดย้อนกลับเร็วๆ) → ไปภาพจริงสุดท้าย
+    track.style.transition = 'none';
+    const lastRealIndex = totalSlides - 2;
+    track.style.transform = `translateX(-${lastRealIndex * 100}%)`;
+    currentSlide = lastRealIndex;
+
+    setTimeout(() => {
+      track.style.transition = 'transform 0.5s ease-in-out';
+    }, 50);
+  }
+
+  isAutoSliding = false;
+});
+
+// ▶️ ปุ่มลูกศรซ้าย
+document.querySelector('.carousel-arrow.left').addEventListener('click', () => {
+  stopAutoSlide();
+  moveToSlide(currentSlide - 1);
+});
+
+// ▶️ ปุ่มลูกศรขวา
+document.querySelector('.carousel-arrow.right').addEventListener('click', () => {
+  stopAutoSlide();
+  moveToSlide(currentSlide + 1);
+});
+
+// 🐭 หยุด auto-slide เมื่อ hover
+const container = document.querySelector('.carousel-container');
+container.addEventListener('mouseenter', stopAutoSlide);
+container.addEventListener('mouseleave', startAutoSlide);
+
+// ▶️ เริ่ม
+startAutoSlide();
+</script>
+
+
+
+<!-- link -->
+ <div class="social-links">
+  <a href="https://www.facebook.com/hom.mie.608859" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.instagram.com/naridakh/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://github.com/Hommie999" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="" target="_blank"><i class=""></i></a>
+</div>
+<!-- footer -->
+    <footer style="text-align: center; font-size: 0.9em; color: #777;">
+    © 2025 Hommie. All rights reserved.
+    </footer>
+</body>
 </html>
