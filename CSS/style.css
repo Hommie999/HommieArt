@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: sans-serif;
 }
 
@@ -190,12 +194,13 @@ body {
   display: flex;
   justify-content: center;     /* จัดให้รูปอยู่กลางแนวนอน */
   align-items: center;
-  margin-bottom: 50px;
-  height: 50vh;
+  margin: 2rem;
 
 }
 .profliepic {
-  width: fit-content;
+  width: clamp(150 px,50vw,500px);
+  object-fit: cover;
+  max-width: 100%;
   filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.665));
 }
 
