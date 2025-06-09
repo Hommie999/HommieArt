@@ -152,7 +152,7 @@ document.querySelector('.carousel-arrow.left').addEventListener('click', () => {
   stopAutoSlide();
     if (currentSlide === 0) {
         track.style.transition = 'transform 0.5s ease-in-out';
-        track.style.transform = `translateX(${3 * 100}%)`;
+        track.style.transform = `translateX(-${3 * -100}%)`;
         currentSlide = index;
     }else{
         moveToSlide(currentSlide - 1);
