@@ -21,9 +21,7 @@
 <!-- แถบนำทาง -->
  <header>
     <div class="navbar">
-        <div class="logo">
-          <a href="aboutme.html">Hommie</a>
-        </div>
+    <a class="logo"href="aboutme.html">Hommie</a>
         <div>
         <ul class="menu">
             <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
@@ -152,7 +150,12 @@ track.addEventListener('transitionend', () => {
 // ▶️ ปุ่มลูกศรซ้าย
 document.querySelector('.carousel-arrow.left').addEventListener('click', () => {
   stopAutoSlide();
-  moveToSlide(currentSlide - 1);
+    if (currentSlide === 0) {
+        moveToSlide(3);
+    }else{
+        moveToSlide(currentSlide - 1);
+    }
+  
 });
 
 // ▶️ ปุ่มลูกศรขวา
