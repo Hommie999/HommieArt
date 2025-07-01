@@ -73,3 +73,35 @@ function moveToSlide(index) {
       const audio = document.getElementById("myAudio");
       audio.play();
     }
+
+// เพิ่มตัวแปรเก็บตำแหน่ง touch
+let touchStartX = 0;
+let touchEndX = 0;
+
+// ระยะทางขั้นต่ำในการปัด (pixel)
+const swipeThreshold = 50;
+
+// ฟังก์ชันตรวจจับ touchstart
+track.addEventListener('touchstart', function (event) {
+  touchStartX = event.touches[0].clientX;
+}, { passive: true });
+
+// ฟังก์ชันตรวจจับ touchmove
+track.addEventListener('touchmove', function (event) {
+  touchEndX = event.touches[0].clientX;
+}, { passive: true });
+
+// ฟังก์ชันตรวจจับ touchend
+track.addEventListener('touchend', function () {
+  const deltaX = touchEndX - touchStartX;
+
+  if (Math.abs(deltaX) > swipeThreshold) {
+    if (deltaX > 0) {
+      // ปัดขวา -> ย้อน slide
+      prevButton.click();
+    } else {
+      // ปัดซ้าย -> เปลี่ยน slide
+      nextButton.click();
+    }
+  }
+});

@@ -102,12 +102,13 @@
   justify-content: center;   /* จัดกลางแนวนอน */
   align-items: center;       /* จัดกลางแนวตั้ง */
   text-align: center; /* จัดกลางแนวนอน */
+  padding: 2rem;
   margin-bottom: 5rem;
 }
 
 .introduce-container p {
   font-family: sarabun;
-  font-size: 2vh;
+  font-size: 20px;
   font-weight: 200;
   color: #ecfff0;
 }
