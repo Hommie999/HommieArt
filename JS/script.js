@@ -72,6 +72,7 @@ function moveToSlide(index) {
     function playSound() {
       const audio = document.getElementById("myAudio");
       audio.play();
+<<<<<<< HEAD
     }
 
 // เพิ่มตัวแปรเก็บตำแหน่ง touch
@@ -105,3 +106,6 @@ track.addEventListener('touchend', function () {
     }
   }
 });
+=======
+    }
+>>>>>>> ff02a77f57b643a436732e91c264bc987ace250c
