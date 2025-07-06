@@ -83,6 +83,11 @@
   }
 }
 
+.carousel-track {
+  touch-action: pan-y;
+  user-select: none;
+}
+
 /* PROFILE-------------------------- */
 .profile-container {
   display: flex;
@@ -102,20 +107,12 @@
   justify-content: center;   /* จัดกลางแนวนอน */
   align-items: center;       /* จัดกลางแนวตั้ง */
   text-align: center; /* จัดกลางแนวนอน */
-<<<<<<< HEAD
-  padding: 2rem;
-=======
->>>>>>> ff02a77f57b643a436732e91c264bc987ace250c
   margin-bottom: 5rem;
 }
 
 .introduce-container p {
   font-family: sarabun;
-<<<<<<< HEAD
-  font-size: 20px;
-=======
   font-size: 2vh;
->>>>>>> ff02a77f57b643a436732e91c264bc987ace250c
   font-weight: 200;
   color: #ecfff0;
 }
