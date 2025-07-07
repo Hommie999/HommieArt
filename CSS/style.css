@@ -32,6 +32,9 @@
   object-fit: cover;
   object-position: center;
   display: block;
+  cursor: zoom-in;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .caption {
@@ -88,6 +91,43 @@
   user-select: none;
 }
 
+/* กล่อง overlay */
+#imageOverlay {
+  position: fixed;
+  top: 0;
+  cursor: zoom-out;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.748);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* รูปขยาย */
+#fullImage {
+  cursor: zoom-out;
+  max-width: 90vw;
+  max-height: 80vh;
+}
+
+/* คำบรรยาย */
+#caption {
+  color: white;
+  font-size: 18px;
+  font-family: sarabun;
+  font-weight: 200;
+  text-align: center;
+  max-width: 90vw;
+  padding: 8px 12px;
+  line-height: 1.6;
+}
+
 /* PROFILE-------------------------- */
 .profile-container {
   display: flex;
@@ -110,11 +150,23 @@
   margin-bottom: 5rem;
 }
 
-.introduce-container p {
+.introduce-description1 ,.introduce-description2{
   font-family: sarabun;
-  font-size: 2vh;
+  line-height: 1.6;
   font-weight: 200;
+}
+
+.introduce-description1{
+  font-size: 2vh;
+  padding: 1rem;
   color: #ecfff0;
+}
+
+.introduce-description2{
+  font-size: 1.8vh;
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  background-color: #0e664950;
 }
 
 .name-text {
@@ -130,6 +182,7 @@
   margin: 10px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* เงานิดหน่อยให้ดูนุ่ม */
 }
+
 
 .introduce-sub-text {
   font-size: 20px;

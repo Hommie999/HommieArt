@@ -45,11 +45,38 @@
   <div class="carousel-track-wrapper">
     <div class="carousel-track">
         <!-- สไลด์จริง -->
-        <div class="carousel-slide"><img src="image/We.jpg" /><div class="caption">Water Color 2024</div></div>
-        <div class="carousel-slide"><img src="image/tanabata.png" /><div class="caption">Digital Art 2025</div></div>
-        <div class="carousel-slide"><img src="image/Palatecolour.png" /><div class="caption">Digital Art 2024</div></div>
-        <div class="carousel-slide"><img src="image/TheDancer.jpg" /><div class="caption">Digital Art 2024</div></div>
-        <div class="carousel-slide"><img src="image/Mind1.jpg" /><div class="caption">Digital Art 2024</div></div>
+        <div class="carousel-slide"><img src="image/We.jpg" data-caption="ภาพแนวนอนขนาด 300x200">/>
+          <div class="caption">Water Color 2024</div>
+          <div class="fullcaption">
+            <p>『We』07/02/2024 <br>แฝดทั้ง 3 คนกำลังนั่งเล่นกันอย่างเพลิดเพลิน</p>
+          </div>
+        </div>
+        <div class="carousel-slide"><img src="image/tanabata.png" />
+          <div class="caption">Digital Art 2025</div>
+          <div class="fullcaption">
+            <p>『Tanabata 2025』28/06/2025 <br>งานนี้วาดขึ้นเพื่อนำไปแข่งขันวาดภาพในกิจกรรมทานาบาตะของโรงเรียน หัวข้อ "เทศกาลทานาบาตะ"</p>
+          </div>
+        </div>
+        <div class="carousel-slide"><img src="image/Palatecolour.png" />
+          <div class="caption">Digital Art 2024</div>
+          <div class="fullcaption">
+            <p>『Palate Colour Challange』04/04/2024 <br>งานนี้วาดเล่นกับเพื่อนๆในชาเลนจ์ 1 pallate 4 artist จะเห้นว่ารูปภาพใช้สีที่จำกัดแตกต่างจากภาพอื่นๆ</p>
+          </div>
+        </div>
+        <div class="carousel-slide"><img src="image/TheDancer.jpg" />
+          <div class="caption">Digital Art 2024</div>
+          <div class="fullcaption">
+            <p>『White Dancer』07/08/2024 <br>รูปภาพนี้ได้ต้นแบบตัวละครมาจากคุณ<a href="https://x.com/HeavenGutter" style="color: #e5c8ff; text-decoration: none; font-weight: bold;">
+              Heaven Gutter</a>
+            </p>
+          </div>
+        </div>
+        <div class="carousel-slide"><img src="image/Mind1.jpg" />
+          <div class="caption">Digital Art 2024</div>
+          <div class="fullcaption">
+            <p>『Mind1』06/03/2024 <br>ภาพวาดแบบแรนด้อมจากไอเดียที่ผุดขึ้นมาในหัว</p>
+          </div>
+    </div>
 
         <!-- Clone สไลด์แรก (เพิ่มไว้ท้ายสุด 1 อันเดียว) -->
         <div class="carousel-slide clone">
@@ -61,6 +88,14 @@
 
   <button class="carousel-arrow right">&#10095;</button>
 </div>
+
+  <!-- กล่อง overlay -->
+  <div id="imageOverlay">
+    <img id="fullImage">
+    <div id="caption"></div>
+  </div>
+  <!-- เสียง -->
+    <audio id="zoomInSound" src="audio/pop.mp3"></audio>
 <!-- โปรไฟล์ -->
  <div>
   <div class="profile-container">
@@ -69,7 +104,8 @@
   <div class="introduce-container">
       <h1 class="name-text">NARIDA</h1>
       <h4 class="introduce-text">AKA. Hommie</h4>
-      <p> หนูชื่อนริดา ชื่นชอบการวาดภาพและสร้างสรรค์ผลงานวาดการ์ตูนค่ะ! ☺</p>
+      <p class="introduce-description1">หนูชื่อนริดา ชื่นชอบการวาดภาพและสร้างสรรค์ผลงานวาดการ์ตูนค่ะ! ☺</p>
+      <p class="introduce-description2">เว็ปไซต์นี้หนูเขียนขึ้นมาจากการศึกษาผ่านอินเตอร์เน็ต, จากรุ่นพี่ เพื่อนหลายๆท่านที่คอยให้คำแนะนำ (และ Ai อีกหลายตัว) เพื่อแนะนำตัวเองและแสดงผลงานของหนู ขอให้ Enjoy กับการเยี่ยมชมเว็ปไซต์นะคะ</p>
       <h4 class="introduce-sub-text">born in 2010</h4>
   </div>
 </div>
@@ -82,7 +118,7 @@
       <a href="https://www.webtoons.com/th/canvas/%E0%B9%80%E0%B8%A5%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%94/list?title_no=1021195">
         <img src="image/lemonlordcover.jpg" class="lemonlordcover">
       </a>
-      <img src="image/tantan.jpg" class="tantan" id="tantan" onclick="playSound()">
+      <img src="image/tantan.jpg" class="tantan" id="tantan" onclick="playtantan()">
     </div>
     <div class="lemonlord-text">
       <span>READ</span>
@@ -90,7 +126,7 @@
       <span>NOW!!!</span>
       <p>การผจญภัยตามล่าปริศนามะนาวที่หายไป</p>
     </div>
-    <audio id="myAudio" src="audio/tbmuk-1.mp3"></audio>
+    <audio id="tbmuk" src="audio/tbmuk-1.mp3"></audio>
   </div>
  </div>
 
@@ -102,6 +138,7 @@
 </div>
 <!-- link -->
   <div class="social-links">
+    <a href="https://x.com/Narida0" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
     <a href="https://www.facebook.com/hom.mie.608859" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="https://www.instagram.com/naridakh/" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://github.com/Hommie999" target="_blank"><i class="fab fa-github"></i></a>
@@ -113,9 +150,5 @@
     © 2025 Hommie. All rights reserved.
     </footer>
 
-        <div class="loadingScreen">
-<!--My content is the word "soundscape" but the o is replaced with a disc-->
-      <img src="image/elephentdogandfriendanimetion.gif"/>
-    </div>
 </body>
 </html>

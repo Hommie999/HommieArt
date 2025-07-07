@@ -1,3 +1,4 @@
+// เลื่อนสไลด์------------------------------------
 const track = document.querySelector('.carousel-track');
 const slides = Array.from(track.children);
 const prevButton = document.querySelector('.carousel-arrow.left');
@@ -63,7 +64,29 @@ function goPrev() {
   }
 }
 
-// 👆 รองรับการลากนิ้ว
+// auto slide
+let autoSlideInterval;
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    goNext();
+  }, 3000); // เลื่อนทุก 3 วินาที
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// เริ่ม auto slide
+window.addEventListener('load', startAutoSlide);
+
+// หยุดเมื่อ hover แล้วเริ่มใหม่เมื่อ mouseleave
+const carouselContainer = document.querySelector('.carousel-container');
+
+carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+carouselContainer.addEventListener('mouseleave', startAutoSlide);
+
+// รองรับการลากนิ้ว  ------------------------------------
 let startX = 0;
 let isDragging = false;
 
@@ -91,7 +114,7 @@ track.addEventListener('touchend', () => {
   isDragging = false;
 });
 
-// ⌨️ รองรับปุ่มลูกศรคีย์บอร์ด
+// รองรับปุ่มลูกศรคีย์บอร์ด
 window.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') {
     goNext();
@@ -100,8 +123,35 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-// loading 
-var loadingScreen = document.querySelector(".loadingScreen");
-window.addEventListener('load', function() {
-  loadingScreen.style.display = 'none';
-})
+// ซูมรูปภาพ------------------------------------
+const overlay = document.getElementById('imageOverlay');
+const fullImage = document.getElementById('fullImage');
+const caption = document.getElementById('caption');
+
+const zoomInSound = document.getElementById('zoomInSound');
+
+document.querySelectorAll('.carousel-slide img').forEach(img => {
+  img.addEventListener('click', () => {
+    fullImage.src = img.src;
+    const captionDiv = img.closest('.carousel-slide')?.querySelector('.fullcaption');
+    const captionText = captionDiv ? captionDiv.innerHTML : ''; 
+    caption.innerHTML = captionText;
+    overlay.style.display = 'flex';
+    
+    zoomInSound.currentTime = 0;
+    zoomInSound.play();
+  });
+});
+
+overlay.addEventListener('click', () => {
+  overlay.style.display = 'none';
+  fullImage.src = '';
+  caption.textContent = '';
+});
+
+// กดตันตัน
+  function playtantan() {
+    const audio = document.getElementById('tbmuk');
+    audio.currentTime = 0; // เริ่มต้นใหม่ทุกครั้งที่คลิก
+    audio.play();
+  }
