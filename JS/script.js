@@ -64,28 +64,6 @@ function goPrev() {
   }
 }
 
-// auto slide
-let autoSlideInterval;
-
-function startAutoSlide() {
-  autoSlideInterval = setInterval(() => {
-    goNext();
-  }, 3000); // เลื่อนทุก 3 วินาที
-}
-
-function stopAutoSlide() {
-  clearInterval(autoSlideInterval);
-}
-
-// เริ่ม auto slide
-window.addEventListener('load', startAutoSlide);
-
-// หยุดเมื่อ hover แล้วเริ่มใหม่เมื่อ mouseleave
-const carouselContainer = document.querySelector('.carousel-container');
-
-carouselContainer.addEventListener('mouseenter', stopAutoSlide);
-carouselContainer.addEventListener('mouseleave', startAutoSlide);
-
 // รองรับการลากนิ้ว  ------------------------------------
 let startX = 0;
 let isDragging = false;
