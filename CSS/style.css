@@ -142,7 +142,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 2rem;
+    padding: 1rem;
     gap: 1rem;
     max-width: 1200px; /* หรือ 1200px ตามที่ดูสวย */
     margin: 0 auto; /* จัดให้อยู่กลางหน้าจอ */
@@ -245,12 +245,12 @@
   max-width: 1000px;
   padding: 3.5vw;
   margin: auto;
-  margin-bottom: 7vh;
+  margin-bottom: 4rem;
 }
 
 .Lemonlord-container {
   display: flex;
-  padding: 5vw;
+  padding: 17pt;
   position: relative;
   flex-direction: column;
   align-items: center;
@@ -345,11 +345,150 @@
 .lemonlord-text a:hover {
   color: #ffffff;
 }
-
-/* content 3 -----------------------------------------------------*/
-.content3{
-  background: #ffffff;
+@media screen and (min-width: 992px) {
+  .content2{
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
+/* content 3-4 stickerline -----------------------------------------------------*/
+.stickerline{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content3,.content4{
+  max-width: 1000px;
+  padding: 4.5vw;
+  margin: auto;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.content3-container , .content4-container{
+  display: flex;
+  padding: 17pt;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  border-radius: 2rem;
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.665));
+  text-align: center; 
+}
+
+.content3-container{
+    background-color: #ecf2d4;
+    border-style: double;
+    border-width: 10px;
+    border-color: #2b6188;
+}
+
+.content4-container{
+    background-color: #ecf2d4;
+    border-style: double;
+    border-width: 10px;
+    border-color: #a3602c;
+}
+
+.stickerline-Hommie img , .stickerline-elephantdog img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  transition: transform 0.2s ease-in-out;
+  filter: drop-shadow(0 5px 5px rgba(74, 62, 35, 0.561));
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.content3-container img:hover,.content4-container img:hover {
+ transform: scale(1.02);
+}
+
+.stickerline-Hommie {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.stickerline-text {
+  color: #082208;
+  font-family: sarabun;
+}
+
+.stickerline-text h2{
+  font-size: 2rem;
+}
+
+.stickerline-text button {
+  border-radius: 1rem;
+  border-width: 3px;
+  border-style: solid;
+  color: #ffffff;
+  margin-top: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-family: sarabun;
+  font-weight: 400;
+  display: inline-block;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.stickerline-Hommie .stickerline-text button{
+  background-color:rgb(202, 122, 122); /* Green */
+  border-color: #5a0e0e;
+}
+
+.stickerline-elephantdog .stickerline-text button{
+  background-color: #b0c472;
+  border-color: #0e5a2e;
+}
+.stickerline-Hommie .stickerline-text button:hover{
+  background-color: #b0c472;
+  border-color: #0e5a2e;
+  transform: scale(1.03);
+}
+.stickerline-elephantdog .stickerline-text button:hover{
+  background-color:rgb(202, 122, 122); /* Green */
+  border-color: #5a0e0e;
+  transform: scale(1.03);
+}
+/* สำหรับหน้าจอกว้าง */
+@media screen and (min-width: 992px) {
+  .stickerline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1px;
+    max-width: 1200px; /* หรือ 1200px ตามที่ดูสวย */
+    margin: 0 auto; /* จัดให้อยู่กลางหน้าจอ */
+  }
+
+  .content3 {
+    flex: 1;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .content4 {
+    flex: 1;
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* ให้ข้อความชิดซ้าย */
+    text-align: left;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+  }
 
 /* ลิงค์โซเซียล -----------------------------------------------------*/
 .social-links {
