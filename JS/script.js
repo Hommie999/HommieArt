@@ -133,3 +133,4 @@ overlay.addEventListener('click', () => {
     audio.currentTime = 0; // เริ่มต้นใหม่ทุกครั้งที่คลิก
     audio.play();
   }
+
