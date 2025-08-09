@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Hommie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website of Hommie, freelance illustrator from Thailand. Explore digital art, traditional art." />
+    <meta name="description" content="Portfolio website of Hommie, freelance illustrator from Thailand. Explore digital art, traditional art. Commisson" />
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="CSS/style.css" />
     <link rel="stylesheet" type="text/css" href="CSS/theme.css" /> 
@@ -45,25 +45,25 @@
   <div class="carousel-track-wrapper">
     <div class="carousel-track">
         <!-- สไลด์จริง -->
-        <div class="carousel-slide"><img src="image/We.jpg" data-caption="ภาพแนวนอนขนาด 300x200">
+        <div class="carousel-slide"><img class="obj-left" src="image/We.jpg" alt="surreal art">
           <div class="caption">Water Color 2024</div>
           <div class="fullcaption">
             <p>『We』07/02/2024 <br>แฝดทั้ง 3 คนกำลังนั่งเล่นกันอย่างเพลิดเพลิน</p>
           </div>
         </div>
-        <div class="carousel-slide"><img src="image/tanabata.png" />
+        <div class="carousel-slide"><img class="tanabata-img" src="image/tanabata.png" alt="tanabata art"/>
           <div class="caption">Digital Art 2025</div>
           <div class="fullcaption">
-            <p>『Tanabata 2025』28/06/2025 <br>งานนี้วาดขึ้นเพื่อนำไปแข่งขันวาดภาพในกิจกรรมทานาบาตะของโรงเรียน หัวข้อ "เทศกาลทานาบาตะ"</p>
+            <p>『Tanabata 2025』28/06/2025 <br>ผลงานจากการเข้าร่วมการแข่งขันวาดภาพในกิจกรรมทานาบาตะของโรงเรียน หัวข้อ "เทศกาลทานาบาตะ"</p>
           </div>
         </div>
-        <div class="carousel-slide"><img src="image/Palatecolour.png" loading="lazy" />
+        <div class="carousel-slide"><img  class="Palatecolour-img" src="image/Palatecolor.webp" loading="lazy" />
           <div class="caption">Digital Art 2024</div>
           <div class="fullcaption">
             <p>『Palate Colour Challange』04/04/2024 <br>งานนี้วาดเล่นกับเพื่อนๆในชาเลนจ์ 1 pallate 4 artist จะเห้นว่ารูปภาพใช้สีที่จำกัดแตกต่างจากภาพอื่นๆ</p>
           </div>
         </div>
-        <div class="carousel-slide"><img src="image/TheDancer.jpg" loading="lazy" />
+        <div class="carousel-slide"><img class="obj-right" src="image/TheDancer.jpg" alt="dancer girl anime" loading="lazy" />
           <div class="caption">Digital Art 2024</div>
           <div class="fullcaption">
             <p>『White Dancer』07/08/2024 <br>รูปภาพนี้ได้ต้นแบบตัวละครมาจากคุณ<a href="https://x.com/HeavenGutter" target="_blank" style="color: #e5c8ff; text-decoration: none; font-weight: bold;">
@@ -80,8 +80,11 @@
 
         <!-- Clone สไลด์แรก (เพิ่มไว้ท้ายสุด 1 อันเดียว) -->
         <div class="carousel-slide clone">
-            <img src="image/We.jpg" /> 
-            <div class="caption">2024</div>
+            <img class="obj-left" src="image/We.jpg" /> 
+            <div class="caption">Water Color 2024</div>
+            <div class="fullcaption">
+              <p>『We』07/02/2024 <br>แฝดทั้ง 3 คนกำลังนั่งเล่นกันอย่างเพลิดเพลิน</p>
+            </div>
         </div>
     </div>
   </div>
@@ -101,7 +104,7 @@
 <!-- โปรไฟล์ -->
  <div class="profile-wrapper">
   <div class="profile-container">
-      <img src="image/ProfliePic.png" class="proflie-image" >
+      <img src="image/ProfliePic.png" class="proflie-image" alt="Hommie" >
   </div>
 
   <div class="introduce-container">
@@ -116,10 +119,10 @@
 <!-- Webtoon -->
  <div class="content2">
   <div class="Lemonlord-container">
-      <img src="image/thunder.gif" class="thunder" loading="lazy">
+      <img src="image/element/thunder.gif" class="thunder" loading="lazy">
     <div class="lemonimg">
       <a href="https://www.webtoons.com/th/canvas/%E0%B9%80%E0%B8%A5%E0%B8%A1%E0%B8%AD%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%AD%E0%B8%94/list?title_no=1021195">
-        <img src="image/lemonlordcover.jpg" class="lemonlordcover">
+        <img src="image/lemonlordcover.jpg" class="lemonlordcover" alt="เลมอนหลอด">
       </a>
       <img src="image/tantan.jpg" class="tantan" id="tantan" onclick="playtantan()">
     </div>
@@ -135,7 +138,8 @@
  </div>
 
  <!-- stickerline -->
-  <div class="stickerline">  <div class="content3">
+  <div class="stickerline">
+    <div class="content3">
       <div class="content3-container">
         <div class="stickerline-Hommie">
           <!-- Hommieee -->

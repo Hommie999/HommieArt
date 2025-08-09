@@ -27,6 +27,15 @@ h2{
     font-weight: 300;
     font-family: sarabun;
 }
+
+h3{
+    color: #a9bd51;
+    margin: 0;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: kanit;
+}
 /* หัว ================================= */
 .top-detail, .top-detail-2{
     color: hsl(107, 61%, 94%);
@@ -46,7 +55,8 @@ h2{
 }
 
 .top-detail-2{
-    background-color: #393937c2;   
+    background-color: #393937c2;
+    margin-bottom: 1rem;   
 }
 
 p{
@@ -74,6 +84,8 @@ p{
 
 /* interest-selector ===================== */
 .interest-selector{
+    padding: 1rem;
+    margin-bottom: 5rem;
     background-color: #c7d6a9;
 }
 
@@ -81,14 +93,60 @@ p{
     text-align: center;
     font-family: kanit;
     font-size: 3.5rem;
-    color: #212b16;
+    font-weight: 600;
+    color: #143d14;
 }
 
 .option{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.option div{
+    background-color: #e4fec8a3;
+    border-radius: 1rem;
+    margin: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.option div:hover{
+    cursor: pointer;
+}
+
+.option h3{
+    color: #7a8e43;
+    font-family: kanit;
+    font-weight: 650;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.option p{
+    color: #84a95f;
+    font-family: kanit;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+}
 .option img{
+  width: 8rem;
+}
+
+.option-painting img{
     border-radius: 50%;
-    width: 100px;
+}
+
+/*  */
+.social-links {
+  margin-top: 1rem;
+}
+.social-links a {
+    color: #50c24d;
+    filter: drop-shadow(0 0 5px #51c24d9b);
 }
