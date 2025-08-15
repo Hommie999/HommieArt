@@ -1,9 +1,15 @@
+
+* {
+  box-sizing: border-box;
+}
+
 h1 ,h2 ,p {
     color: #ffffff;
 }
 
 body{
     background-color: rgb(21, 28, 26);
+    overflow-x: hidden;
 }
 
 .top {
@@ -29,11 +35,11 @@ h2{
 }
 
 h3{
-    color: #a9bd51;
+    color: #c9d39e;
     margin: 0;
     letter-spacing: 1.5px;
-    font-weight: 600;
-    font-size: 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
     font-family: kanit;
 }
 /* หัว ================================= */
@@ -55,8 +61,14 @@ h3{
 }
 
 .top-detail-2{
+    background-color: #4a4a3dc2;
+    margin-bottom: 0.67rem;   
+}
+
+.social-links-container{
     background-color: #393937c2;
-    margin-bottom: 1rem;   
+    border-radius: 1rem;
+    padding: 6px;
 }
 
 p{
@@ -86,13 +98,14 @@ p{
 .interest-selector{
     padding: 1rem;
     margin-bottom: 5rem;
-    background-color: #c7d6a9;
+    background-color: #c2b740;
+    background-image: linear-gradient(#c2b740,#88b850);
 }
 
 .interest-title{
     text-align: center;
     font-family: kanit;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: #143d14;
 }
@@ -101,30 +114,37 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-
+    align-items: stretch;
+    flex-wrap: wrap;
 }
+
 .option div{
-    background-color: #e4fec8a3;
+    flex: 1 1 200px;    
+    max-width: 250px; 
+    background-color: #f4ffe772;
     border-radius: 1rem;
     margin: 5px;
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.2s ease-in-out;
 }
 
 .option div:hover{
     cursor: pointer;
+    transform: scale(1.04);
 }
 
 .option h3{
-    color: #7a8e43;
+    color: #5a7412;
     font-family: kanit;
     font-weight: 650;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
-    margin: 0;
+    line-height: 24px;
+    margin: 3px;
     padding: 0;
 }
 .option p{
@@ -135,11 +155,16 @@ p{
     text-align: center;
 }
 .option img{
-  width: 8rem;
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  max-width: 200px;
+  object-fit: contain;
 }
 
 .option-painting img{
     border-radius: 50%;
+    object-fit: cover;
 }
 
 /*  */
@@ -147,6 +172,6 @@ p{
   margin-top: 1rem;
 }
 .social-links a {
-    color: #50c24d;
+    color: #ffffff;
     filter: drop-shadow(0 0 5px #51c24d9b);
 }

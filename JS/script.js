@@ -1,3 +1,20 @@
+// navbar
+fetch('navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+
+function toggleHam(x) {
+  x.classList.toggle("change");
+
+  let myMenu = document.getElementById('myMenu');
+  if (myMenu.class === 'menu'){
+    myMenu.className += 'menu-active'
+  } else {
+    
+  }
+}
 // เลื่อนสไลด์------------------------------------
 const track = document.querySelector('.carousel-track');
 const slides = Array.from(track.children);
