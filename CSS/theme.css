@@ -7,8 +7,17 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: sans-serif;
-  padding-top: 60px; /
+  font-family: sarabun;
+  background-color: rgb(21, 28, 26);
+}
+
+.notice{
+  font-family: kanit;
+  font-size: 1.8rem;
+  background-color: #333;
+  padding: 2rem;
+  color: #f2ff00cc;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
@@ -25,7 +34,6 @@ body {
 
 /* แถบนำทาง */
     .navbar {
-      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -70,48 +78,9 @@ body {
     .menu li {
        list-style: none;
     }
-
-    .dropbtn {
-      display: inline-block;
-       color: rgb(42, 14, 25);
-      cursor: pointer;
-      z-index: 10; /* ดันให้อยู่หน้าสไลด์ */
-    }
-      /* เมนูย่อย */
-  .sub-menu {
-    display: none;
-    position: absolute;
-    background-color:#c4cca596;
-    min-width: 180px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    padding: 0;
-    margin: 0;
-  }
-
-  .sub-menu li {
-    list-style: none;
-  }
-
-  .sub-menu li a {
-    color: #333;
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
-  }
-
-  .sub-menu li a:hover {
-    background-color: #ffffff;
-  }
-
-  /* แสดงเมนูเมื่อ hover */
-  .menu > li:hover .sub-menu {
-    display: block;
-  }
     
   .menu a,
-  .logo a,
-  .dropbtn {
+  .logo a{
     transition: transform 0.2s ease-in-out;
     display: inline-block;
     user-select: none;         /* ป้องกันการเลือกข้อความ */
@@ -121,37 +90,10 @@ body {
   }
 
   .menu a:hover,
-  .logo a:hover,
-  .dropbtn:hover {
+  .logo a:hover {
     transform: scale(1.1);
   }
 
-  /* hamburger */
-  .ham-menu {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #551717;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
-}
-.menu-active {
-  display: block;
-}
 /* ลิงค์โซเซียล -----------------------------------------------------*/
 .social-links {
   margin-top: 4vh;
