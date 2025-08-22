@@ -1,15 +1,44 @@
 <nav class="navbar">
-    <a class="logo"href="aboutme.html">Hommie</a>
-    <ul class="menu">
+<div class="container">
+    <div class="nav-wrapper">
+    <div class="logo">
+        <a class="logo"href="aboutme.html">Hommie</a>
+    </div>
+    <ul class="menu" id="myMenu">
         <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
-        <li><a href="artwork.html">Work</a></li>
+        <li><a href="artwork.html" class="green-nav">Work</a></li>
         <li><a href="commission.html">CMS</a></li>
-        <li><a href="OC.html">OC</a></li>
+        <li><a href="OC.html" class="green-nav">OC</a></li>
     </ul>
-    <div hidden>
-        <div class="ham-menu" onclick="toggleHam(this)">
+    <div class="ham-menu" onclick="toggleHam()">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
     </div>
+    </div>
+</div>
 </nav>
+
+  <script>
+    function toggleHam() {
+      const menu = document.getElementById("myMenu");
+      const ham = document.querySelector(".ham-menu");
+      
+      // Toggle menu visibility
+      menu.classList.toggle("active");
+      // Toggle hamburger animation
+      ham.classList.toggle("change");
+    }
+
+    // ปิดเมนูเมื่อคลิกนอก (optional)
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById("myMenu");
+      const ham = document.querySelector(".ham-menu");
+      const isClickInside = ham.contains(e.target) || menu.contains(e.target);
+
+      if (!isClickInside && menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        ham.classList.remove('change');
+      }
+    });
+  </script>

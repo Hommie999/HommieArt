@@ -1,9 +1,32 @@
-// navbar
+// เรียกใช้ navbar
 fetch('navbar.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('navbar').innerHTML = data;
     });
+
+    // แฮมเบอเด้อ
+  function toggleHam() {
+    const menu = document.getElementById("myMenu");
+    const ham = document.querySelector(".ham-menu");
+    
+    // Toggle menu visibility
+    menu.classList.toggle("active");
+    // Toggle hamburger animation
+    ham.classList.toggle("change");
+  }
+
+  // ปิดเมนูเมื่อคลิกนอก (optional)
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById("myMenu");
+    const ham = document.querySelector(".ham-menu");
+    const isClickInside = ham.contains(e.target) || menu.contains(e.target);
+
+    if (!isClickInside && menu.classList.contains('active')) {
+      menu.classList.remove('active');
+      ham.classList.remove('change');
+    }
+  });
 
 // เลื่อนสไลด์------------------------------------
 const track = document.querySelector('.carousel-track');
