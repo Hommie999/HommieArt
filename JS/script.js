@@ -157,6 +157,37 @@ overlay.addEventListener('click', () => {
   caption.textContent = '';
 });
 
+// ขยายรูปภาพ หน้า cms--------------------------------------
+// เปิด Lightbox
+function openLightbox(img) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  
+  // ดึงรูปต้นฉบับจาก data-full
+  lightboxImg.src = img.dataset.full;
+  
+  // แสดง Lightbox
+  lightbox.style.display = "flex";
+  
+  // ป้องกัน scroll พื้นหลัง
+  document.body.style.overflow = "hidden";
+}
+
+// ปิด Lightbox
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  lightbox.style.display = "none";
+  document.body.style.overflow = ""; // คืนค่า scroll
+}
+
+// ปิด Lightbox เมื่อกดปุ่ม Esc
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    closeLightbox();
+  }
+});
+
+
 // กดตันตัน
   function playtantan() {
     const audio = document.getElementById('tbmuk');
