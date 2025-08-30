@@ -273,8 +273,21 @@ p{
 }
 
 .thumbnail:hover {
-  filter: hue-rotate(180deg); /* ทำให้เป็นสีเทา */
   transform: scale(1.05);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .thumbnail:hover {
+        filter: hue-rotate(180deg);
+        transform: scale(1.05);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .thumbnail:hover {
+    filter: none;
+    transform: none;
+  }
 }
 
 .content hr{
