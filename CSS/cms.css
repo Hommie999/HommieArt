@@ -142,6 +142,9 @@ p{
     flex-wrap: wrap;
 }
 
+.option a{
+  text-decoration: none;
+}
 .option div{
     flex: 1 1 200px;    
     max-width: 250px; 
@@ -242,10 +245,26 @@ p{
   position: relative;
 }
 
+.image-wrapper{
+  position: relative;
+  z-index: 2;
+}
+
 .leaf {
   position: absolute;
   z-index: 0;
   opacity: 0.3;
+}
+
+.leaf1{ right: 10px;}
+.leaf2{ left: 10px; width: 70%; max-width: 800px; rotate: -40deg;}
+.leaf3{ right: 10px; rotate: 20deg; }
+.leaf4{ left: 10px; }
+.leaf5{right: 10px;}
+.leaf6{left: 10px; width: 500px;}
+
+@media (max-width: 1250px) {
+  .leaf2{top: 60em; rotate: -20deg;}
 }
 
 .content {
@@ -286,7 +305,6 @@ p{
 @media (hover: none) and (pointer: coarse) {
   .thumbnail:hover {
     filter: none;
-    transform: none;
   }
 }
 
@@ -338,7 +356,7 @@ p{
 /* credit----------------------------------------- */
 .credit{
     text-align: center;
-    background-color: #ffffff;
+    background-color: #fffee1;
     margin: 20px 0;
     padding: 10px;
 }
