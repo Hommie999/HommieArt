@@ -146,7 +146,7 @@ p{
   text-decoration: none;
 }
 .option div{
-    flex: 1 1 200px;    
+    flex: 1 1 200px;  
     max-width: 250px; 
     background-color: #f4ffe772;
     border-radius: 1rem;
@@ -240,6 +240,19 @@ p{
     position: relative;
     z-index: 2;
 }
+
+.cms-box p{
+  margin: 4px;
+}
+
+.cms-box h4{
+  font-size: 1.2rem;
+  color: #49591f;
+  font-weight: 600;
+  background-color: #e0e6b5;
+  padding: 2px;
+  margin: 22px 20vw;
+}
 /* leaf --------------------------------*/
 .wrapper {
   position: relative;
@@ -252,19 +265,27 @@ p{
 
 .leaf {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   opacity: 0.3;
+  margin: auto;
+  user-select: none;       
 }
 
-.leaf1{ right: 10px;}
+.leaf1{ right: 10px; margin: 0;}
 .leaf2{ left: 10px; width: 70%; max-width: 800px; rotate: -40deg;}
 .leaf3{ right: 10px; rotate: 20deg; }
-.leaf4{ left: 10px; }
-.leaf5{right: 10px;}
-.leaf6{left: 10px; width: 500px;}
+.leaf4{ left: 10px; transform: scaleX(-1);}
+.leaf5{left: 10px;}
+.leaf6{right: 10px; width: 500px; rotate: -20deg;}
 
 @media (max-width: 1250px) {
+  .leaf1{left: 5px; max-width: 350px;}
   .leaf2{top: 60em; rotate: -20deg;}
+  .leaf4{width: 65%;} 
+  .leaf3{display: none;}
+  .leaf5{max-width: 300px; left: 10px; right: auto;}
+  .leaf6{left: 5px; width: 45%; margin: 1px; }
+  .image-wrapper {  margin: 0px 25px; }
 }
 
 .content {
