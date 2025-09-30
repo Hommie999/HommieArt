@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scroll animation fixed</title>
+<style>
+  body {
+    height: 200vh; /* ทำให้มีพื้นที่เลื่อนลงไป */
+    background: #f6f8fa;
+    padding: 20px;
+  }
+
+  h5.termsection {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: yellow; /* สีเริ่มต้น */
+    transition: background-color 1s ease;
+    width: fit-content;
+    margin: 600px auto; /* เอา h5 ไปไว้กลาง ๆ หน้า จะได้เลื่อนมาถึง */
+    font-size: 20px;
+  }
+
+  h5.termsection.active {
+    background-color: green; /* สีเปลี่ยนตอนเห็น */
+    color: white; /* เพิ่มสีตัวหนังสือให้เห็นชัด */
+  }
+</style>
+</head>
+<body>
+
+<h2>เลื่อนลงไปดู h5 ด้านล่าง</h2>
+
+<h5 class="termsection">ฉันคือ h5 ที่จะเปลี่ยนสี</h5>
+
+<script>
+  const termsection = document.querySelector('h5.termsection');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        termsection.classList.add('active');   // ใส่ class ตอนโผล่
+      } else {
+        termsection.classList.remove('active'); // เอาออกตอนเลื่อนผ่านไป
+      }
+    });
+  }, { threshold: 0.1 }); // เห็นแค่ 10% ก็ทำงานแล้ว
+
+  observer.observe(termsection);
+</script>
+
+</body>
+</html>

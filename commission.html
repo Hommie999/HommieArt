@@ -10,8 +10,10 @@
     <link rel="stylesheet" type="text/css" href="CSS/cms.css" />
     <!-- Javascript -->
     <script src="JS/script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="icon" type="image/ico" href="image/Gai.png">
-    <!--  -->
+    <!-- Libary -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -21,7 +23,7 @@
 
  <!-- content ================= -->
 <header>
-  <div class="wrapper">
+  <div class="wrapper"data-aos="fade-in">
     <div class="top">
 
       <img src="image/CHEW-transparent.webp" class="bg-img">
@@ -49,8 +51,6 @@
           <a href="" target="_blank"><i class=""></i></a>
         </div>
       </div>
-
-      <!-- ข้อตกลง--------------------- -->
       
     </div>
   </div>
@@ -58,11 +58,11 @@
 
 
   <!-- เมนูนำทาง  ================= -->
-  <div class="interest-selector">
-    <h2 class="interest-title">คุณสนใจอะไร ?</h2>
+  <div class="interest-selector" >
+    <h2 class="interest-title" data-aos="fade-up" >คุณสนใจอะไร ?</h2>
     <div class="option">
       
-      <a href="#painting">
+      <a href="#painting" data-aos="flip-down">
         <div class="option-painting">
           <img src="image/Hommie-halfbody-Ilovemybf.jpg" alt="">
           <h3>ภาพวาด</h3>
@@ -70,7 +70,7 @@
         </div>
       </a>
 
-      <a href="#pixelart">
+      <a href="#pixelart" data-aos="flip-down">
         <div class="option-pixelart">
           <img src="image/longkong-cat-gift-unscreen.gif" alt="">
           <h3>Pixel Art</h3>
@@ -78,90 +78,35 @@
         </div>
       </a>
 
-      <div class="option-mcskin">
+      <div class="option-mcskin" data-aos="flip-down">
         <img src="image/minecraft skin rotate/mcskin-tai.gif" alt="">
         <h3>Minecraft Skin</h3>
         <p>64x64 px ใส่ได้ทั้ง java และ pe</p>
       </div>
+
     </div>
   </div>
 
 <main>
 
+      <a href="#cmsterm" data-aos="flip-down">
+        <div class="option-pixelart">
+          <h3>ข้ามไปอ่านข้อตกลง</h3>
+        </div>
+      </a>
+
   <div class="cms-container">
-  <details class="toggle-box" style="color: aliceblue;" hidden>
-      <summary class="button">อ่านข้อตกลงที่นี่</summary>
-      <div>
-      <h3>Commission Terms</h3>
-      <h4>ข้อตกลง/รายละเอียด</h4>
-      <p>ควรอ่านให้ละเอียดก่อนจ้างงานจะได้ไม่พลาดข้อควรรู้ต่างๆ!</p>
-      
-        <!-- การบรีฟงาน -->
-        <h5>1. การบรีฟงาน</h5>
-        <p>ลำดับคิวจะเรียงลำดับตามการบรีฟ</p>
-        <p>ติดต่อทางช่องทางการติดต่อด้านบนแล้วบรีฟงาน บอกรายละเอียดรูปภาพที่คุณอยากได้ เนื่องจากหนูวาดภาพหลายสไตล์มากอยากให้แจ้งก่อนว่าอยากได้งานสไตล์แบบภาพไหนจากตัวอย่างผลงาน</p>
-        <p>ถ้าไม่รู้ว่าอยากจะให้ภาพออกมาแบบไหนในหัว สามารถสั่งแบบโอมากาเสะได้นะ (บรีฟแค่ตัวละครหรือหัวข้อแล้วที่เหลือให้หนูจัดการเอง!)</p>
-        <strong>**แจ้งว่างานนี้นำไปใช้ทำอะไรบ้าง เชิงพาณิชย์ไหม</strong>
-          <details>
-            <summary>เชิงพาณิชย์คืออะไร</summary>
-            <p>การใช้งานเชิงพาณิชย์ (Commercial use) คือ การนำผลงานไปใช้เพื่อหาประโยชน์ทางการค้า/ธุรกิจ ไม่ว่าจะเป็นทางตรงหรือทางอ้อม เช่น นำภาพไปทำโลโก้ แบรนดิ้ง โปรไฟล์ช่อง โปรไฟล์ร้านค้า ปกหนังสือ โฆษณา, พิมพ์ภาพลงเสื้อ สติ๊กเกอร์ แสตนดี้ สินค้าต่างๆเพื่อนำไปขาย (แต่ถ้าแจกจ่ายจะไม่นับ) </p>
-            <p>การใช้งานส่วนตัว (Personal Use) คือ การนำผลงานไปใช้เพื่อจุดประสงค์ส่วนตัว เช่น เก็บผลงานไว้ดูหรือสะสมเฉยๆ ใช้เป็นวอลเปเปอร์มือถือ คอม โปรไฟล์ส่วนตัว โพสต์ลงโซเซียลมีเดียส่วนตัว นำไปพิมพ์ลงเสื้อ สติ๊กเกอร์ แสตนดี้ใช้เองหรือแจกให้เพื่อนๆ</p>
-          </details>
-
-        <!-- การชำระเงิน -->
-        <h5>2. การชำระเงิน</h5>
-        <p>จ่ายเงินมัดจำ 50% หรือจ่ายราคาเต็มก่อนเริ่มงาน</p>
-        <h6>ช่องทางการชำระเงิน </h6>
-        <ul>
-          <li>ธนาคาร (กสิกร)</li>
-          <li>ทรูมันนี่วอเล็ต (ไม่บวกเพิ่ม)</li>
-        </ul>
-        
-        <!-- การวาดภาพ -->
-        <h5>3. การวาดภาพ</h5>
-        <p>หนูจะร่างภาพให้คุณดูก่อน อาจจะมีการถามรายละเอียดบรีฟเรื่อยๆ พร้อมกับอัพเดท</p>
-        <ul>
-          <li>ขนาดของภาพวาดจะมีความละเอียด 2k -3k 300 dpi สามารถสอบถามหรือรีเควสขนาดภาพวาดได้ตอนบรีฟ</li>
-        </ul>
-        
-        <h6>การแก้งาน</h6>
-        <ul>
-          <li>แก้งานทีหลัง หลังตัดเส้น/เบลนแล้ว คิดเงินเพิ่ม</li>
-          <li>แก้งานเล็กๆน้อยจะไม่นับ</li>
-        </ul>
-        
-        <h6>ระยะเวลาการทำงาน</h6>
-        <p>ระยะเวลางานจะมากขึ้นตามความยากง่ายของงาน สามารถพูดคุยกำหนดเรื่องระยะเวลางานได้ แต่คุณภาพของงานอาจเปลี่ยนไปตามระยะเวลาที่สั้นลง</p>
-
-        <!-- การส่งงาน -->
-        <h5>4. การส่งงาน</h5>
-        <p>หลังจากจ่ายมัดจำครบแล้ว</p>
-        <ul>
-          <li>ส่งงานผ่าน email หรือ google drive ตามที่ท่านสะดวก สำหรับ google drive จะสามารถเปิดได้ทุกคนที่มีลิงค์ หรือต้องการให้ดึง email เฉพาะสามารถบอกได้ค่ะ</li>
-          <li>จะได้รับไฟล์ภาพเป็นไฟล์ png สามารถบอกหนูได้ว่าต้องการไฟล์ jpeg ด้วย</li>
-          <li>สำหรับงานที่วาดตัวละคร / พื้นหลัง แยกกันท่านจะได้รับภาพโปร่งใสด้วย</li>
-          <li>ถ้าต้องการไฟล์ psd ด้วย สำหรับงานที่มีการแยกเลเยอร์ละเอียด จะคิดค่าไฟล์ psd เพิ่ม</li>
-        </ul>
-
-        <h5>5. ข้อตกลงอื่นๆ</h5>
-        <ul>
-          <li>ลิขสิทธิ์ผลงานจะเป็นของหนู ถ้าคุณต้องการนำงานไปใช้เชิงพาณิชย์ จะเก็บราคาเพิ่ม 100 บาท - 2 เท่าของราคางาน</li>
-          <li>งานที่เสร็จแล้วหนูสามารถนำไปเผยแพร่ได้ที่โซเซียลมีเดีย หรือตามที่หนูต้องการ สามารถแจ้งได้ถ้าอยากให้หนู tag ใส่เครดิตคนจ้าง แต่ถ้าต้องการให้งานเป็นส่วนตัวให้แจ้งล่วงหน้าด้วย</li>
-        </ul>
-      </ul>
-    </details>
-
   <div class="cms-wrapper">
-    <div class="leaf-wrapper" >
-      <img src="image/Leaves/feb_fang_88 [Converted]5.webp" class="leaf leaf1">
+    <div class="leaf-wrapper">
+      <img src="image/Leaves/feb_fang_88 [Converted]5.webp" class="leaf leaf1" >
     </div>
-    <div class="content">
-      <div class="painting" id="painting">
+    <div class="content" >
+      <div class="painting" id="painting" >
         <h2>Painting</h2>
         <h3>ภาพวาด</h3>
         <hr>
 
-      <div class="cms-box">
+      <div class="cms-box" data-aos="fade-in">
         <h2>Head Shot</h2>
         <h3>แบบตัดเส้น</h3>
         <p>หัว - คอหรืออก</p>
@@ -207,7 +152,7 @@
         <hr>
       </div>
 
-      <div class="cms-box">
+      <div class="cms-box" data-aos="fade-in">
         <h2>Head Shot</h2>
         <h3>แบบไม่ตัดเส้น</h3>
         <p>หัว - คอหรืออก</p>
@@ -254,7 +199,7 @@
         <hr>
       </div>
 
-      <div class="cms-box">
+      <div class="cms-box" data-aos="fade-in">
         <h2>HALF BODY</h2>
         <h3>ครึ่งตัว</h3>
         <p>ครึ่งตัว หัว-ช่วงสะโพก คิดราคาตามรายละเอียดน้อย</p>
@@ -301,7 +246,7 @@
         <hr>
       </div>
 
-      <div class="cms-box">
+      <div class="cms-box" data-aos="fade-in">
         <h2>Knee Up</h2>
         <h3>หัวเข่า</h3>
         <p>หัว - ไม่เกินช่วงเข่า</p>
@@ -347,7 +292,7 @@
         <hr>
       </div>
 
-      <div class="cms-box">
+      <div class="cms-box" data-aos="fade-in">
         <img src="image/Leaves/rm191-adj-138 [Converted].webp" class="leaf leaf6">
         <h2>Full Body</h2>
         <h3>เต็มตัว</h3>
@@ -416,7 +361,68 @@
    <!-- Pixel Art -->
 
    <!-- Minecraft skin -->
+<div class="cmsterm-warpper">
+   <div class="cmsterm" id="cmsterm">
+        <h3>COMMISSION TERMS</h3>
+        <h4>ข้อตกลง/รายละเอียด</h4>
+        
+          <!-- การบรีฟงาน -->
+          <h5 class="termsection">1. การบรีฟงาน</h5>
+          <p>ลำดับคิวจะเรียงลำดับตามการบรีฟ</p>
+          <p>ติดต่อทางช่องทางการติดต่อด้านบนแล้วบรีฟงาน บอกรายละเอียดรูปภาพที่คุณอยากได้ บอกก่อนว่าอยากได้งานสไตล์แบบภาพไหนจากตัวอย่างผลงาน</p>
+          <p>ถ้าไม่รู้ว่าอยากจะให้ภาพออกมาแบบไหนในหัว สามารถสั่งแบบโอมากาเสะได้นะ (บรีฟแค่ตัวละครหรือหัวข้อแล้วที่เหลือให้หนูจัดการเอง!)</p>
+          <p class="note">⚠️ โปรดแจ้งว่างานนี้นำไปใช้ทำอะไรบ้าง เชิงพาณิชย์ไหม</p>
+            <details>
+              <summary>เชิงพาณิชย์คืออะไร</summary>
+              <div class="commericaluse">
+                <p class="commerical">การใช้งานเชิงพาณิชย์ (Commercial use) คือ การนำผลงานไปใช้เพื่อหาประโยชน์ทางการค้า/ธุรกิจ ไม่ว่าจะเป็นทางตรงหรือทางอ้อม เช่น นำภาพไปทำโลโก้ แบรนดิ้ง โปรไฟล์ช่อง โปรไฟล์ร้านค้า ปกหนังสือ โฆษณา, พิมพ์ภาพลงเสื้อ สติ๊กเกอร์ แสตนดี้ สินค้าต่างๆเพื่อนำไปขาย (แต่ถ้าแจกจ่ายจะไม่นับ) </p>
+                <p class="personal">การใช้งานส่วนตัว (Personal Use) คือ การนำผลงานไปใช้เพื่อจุดประสงค์ส่วนตัว เช่น เก็บผลงานไว้ดูหรือสะสมเฉยๆ ใช้เป็นวอลเปเปอร์มือถือ คอม โปรไฟล์ส่วนตัว โพสต์ลงโซเซียลมีเดียส่วนตัว นำไปพิมพ์ลงเสื้อ สติ๊กเกอร์ แสตนดี้ใช้เองหรือแจกให้เพื่อนๆ</p>
+              </div>
+            </details>
 
+          <!-- การชำระเงิน -->
+          <h5 class="termsection">2. การชำระเงิน</h5>
+          <p>จ่ายเงินมัดจำ 50% หรือจ่ายราคาเต็มก่อนเริ่มงาน</p>
+          <h6>ช่องทางการชำระเงิน </h6>
+          <ul>
+            <li>ธนาคาร (กสิกร)</li>
+            <li>ทรูมันนี่วอเล็ต (ไม่บวกเพิ่ม)</li>
+          </ul>
+          
+          <!-- การวาดภาพ -->
+          <h5 class="termsection">3. การวาดภาพ</h5>
+          <p>หนูจะร่างภาพให้คุณดูก่อน อาจจะมีการถามรายละเอียดบรีฟเรื่อยๆ พร้อมกับอัพเดท</p>
+          <ul>
+            <li>ขนาดของภาพวาดจะมีความละเอียด 2k -3k 300 dpi สามารถสอบถามหรือรีเควสขนาดภาพวาดได้ตอนบรีฟ</li>
+          </ul>
+          
+          <h6>การแก้งาน</h6>
+          <ul>
+            <li>แก้งานทีหลัง หลังตัดเส้น/เบลนแล้ว คิดเงินเพิ่ม</li>
+            <li>แก้งานเล็กๆน้อยจะไม่นับ</li>
+          </ul>
+          
+          <h6>ระยะเวลาการทำงาน</h6>
+          <p>ระยะเวลางานจะมากขึ้นตามความยากง่ายของงาน สามารถพูดคุยกำหนดเรื่องระยะเวลางานได้ แต่คุณภาพของงานอาจเปลี่ยนไปตามระยะเวลาที่สั้นลง</p>
+
+          <!-- การส่งงาน -->
+          <h5 class="termsection">4. การส่งงาน</h5>
+          <p>ส่งงานหลังจากจ่ายมัดจำครบแล้ว</p>
+          <ul>
+            <li>ส่งงานผ่าน email หรือ google drive ตามที่ท่านสะดวก สำหรับ google drive จะสามารถเปิดได้ทุกคนที่มีลิงค์ หรือต้องการให้ดึง email เฉพาะสามารถบอกได้ค่ะ</li>
+            <li>จะได้รับไฟล์ภาพเป็นไฟล์ png สามารถบอกหนูได้ว่าต้องการไฟล์ jpeg ด้วย</li>
+            <li>สำหรับงานที่วาดตัวละคร / พื้นหลัง แยกกันท่านจะได้รับภาพโปร่งใสด้วย</li>
+            <li>ถ้าต้องการไฟล์ psd ด้วย สำหรับงานที่มีการแยกเลเยอร์ละเอียด จะคิดค่าไฟล์ psd เพิ่ม</li>
+          </ul>
+
+          <h5 class="termsection">5. ข้อตกลงอื่นๆ</h5>
+          <ul>
+            <li>ลิขสิทธิ์ผลงานจะเป็นของหนู ถ้าคุณต้องการนำงานไปใช้เชิงพาณิชย์ จะเก็บราคาเพิ่ม 100 บาท - 2 เท่าของราคางาน</li>
+            <li>งานที่เสร็จแล้วหนูสามารถนำไปเผยแพร่ได้ที่โซเซียลมีเดีย หรือตามที่หนูต้องการ สามารถแจ้งได้ถ้าอยากให้หนู tag ใส่เครดิตคนจ้าง แต่ถ้าต้องการให้งานเป็นส่วนตัวให้แจ้งล่วงหน้าด้วย</li>
+          </ul>
+        </ul>
+      </div>
+</div>
    
 </main>
 
@@ -442,5 +448,48 @@
 </footer>
 </body>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+      document.addEventListener('aos:in', ({ detail }) => {
+    console.log('animated in', detail);
+  });
+
+  document.addEventListener('aos:out', ({ detail }) => {
+    console.log('animated out', detail);
+  });
+  </script>
+
 </html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (!('IntersectionObserver' in window)) return; // รองรับเบราว์เซอร์เก่า
+
+  const placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==';
+  const images = document.querySelectorAll('img:not([loading])'); // ไม่แตะรูปที่มี loading แล้ว
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+        img.classList.remove('lazy');
+        observer.unobserve(img);
+      }
+    });
+  });
+
+  images.forEach(img => {
+    // ข้ามรูปที่อาจเป็น icon หรือ inline SVG
+    if (img.src.startsWith('data:')) return;
+
+    img.dataset.src = img.src;
+    img.src = placeholder;
+    img.classList.add('lazy');
+    observer.observe(img);
+  });
+});
+</script>
 

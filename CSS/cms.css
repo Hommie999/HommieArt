@@ -374,6 +374,139 @@ p{
   from { opacity: 0; }
   to { opacity: 1; }
 }
+/* cms term toggle */
+.cmsterm{
+    background-color: #313120c2;
+    background-image: linear-gradient(#181806c2,#1a2114);
+    filter: drop-shadow(0px 0px 8px #62d40480);
+    border-radius: 2rem;
+    margin: 1rem 10rem ;
+    color: #edecd3;
+    border-style: solid;
+    border-color: #83a95f;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cmsterm{ 
+    margin: 1rem 25px ;
+    max-width: none ;
+  }
+}
+
+.cmsterm h3{
+  font-size: 2.5rem;
+  font-family:"Orbitron" ;
+  color: #c5850f;
+  margin-top: 1.5rem;
+}
+.cmsterm h4{
+  font-size: 1.6rem;
+  font-family: kanit;
+  font-weight: 250;
+  color: #c5c50f;
+  margin: 0;
+}
+.cmsterm p {
+  margin: 11px ;
+  font-weight: 200;
+  font-size: 20px;
+  margin-top: 1rem;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #4a831c35;
+  padding: 20px;
+  border-radius: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cmsterm p:hover{
+  transform: scale(1.03);
+}
+
+.cmsterm p, ul {
+  text-align: left;
+}
+
+.cmsterm h5{
+  font-size: 1.5rem;
+  font-family: kanit;
+  font-weight: 600;
+  padding: 10px;
+  color: #1d1c04;
+  background-color: #80c235;
+  transition: background-color 1s ease;
+
+}
+
+.cmsterm h5:hover{
+  background-color: #fbd514;
+}
+
+.cmsterm h6{
+  font-size: 1.5rem;
+  background-color: #e2bc10;
+  color: #1a2114;
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  max-width: 20rem;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.cmsterm ul{
+  font-size: 1rem;
+  color: #e7e54e;
+  font-weight: 300;
+  margin-right: 10px;
+}
+.cmsterm li{
+  margin-top: 10px;
+  line-height: 25px;
+}
+
+.cmsterm .note{background-color: #457e1690;}
+.commericaluse{
+  margin-top: 1rem;
+}
+
+.commericaluse p {
+    color: rgb(6, 36, 7) ;
+    margin: 0%;
+    border-radius: 0%;
+}
+.commericaluse p:hover{transform: none;}
+.commericaluse p.commerical {background-color: rgb(131, 205, 116);}
+.commericaluse p.personal {background-color: rgb(219, 216, 124);}
+
+summary{
+  font-size: 1.5rem;
+  background-color: #e2bc10;
+  color: #1a2114;
+  margin-top: 1.2rem;
+  max-width: 20rem;
+}
+
+details > summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details > summary::-webkit-details-marker {
+  display: none; /* ซ่อนลูกศร default */
+}
+/* กล่องที่เลื่อน */
+details .commericaluse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+/* ตอน open */
+details[open] .commericaluse {
+  max-height: 1000px; /* ตั้งให้ใหญ่พอที่จะคลุมเนื้อหาหมด */
+}
+
 /* credit----------------------------------------- */
 .credit{
     text-align: center;
