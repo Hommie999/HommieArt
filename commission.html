@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio website of Hommie, freelance illustrator from Thailand. Explore digital art, traditional art, and tote bag designs." />
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="CSS/theme.css" /> 
-    <link rel="stylesheet" type="text/css" href="CSS/cms.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/theme.css"/> 
+    <link rel="stylesheet" type="text/css" href="CSS/cms.css"/>
     <!-- Javascript -->
     <script src="JS/script.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="icon" type="image/ico" href="image/Gai.png">
     <!-- Libary -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -44,14 +44,17 @@
       <div class="social-links-container">
         <h3>ช่องทางการติดต่อ</h3>
         <div class="social-links">
-          <a href="https://x.com/Narida0" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.facebook.com/hom.mie.608859" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.instagram.com/naridakh/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://discord.gg/2TjPD2Zm" target="_blank"><i class="fa-brands fa-discord"></i></a>
-          <a href="" target="_blank"><i class=""></i></a>
+          <a href="https://x.com/Narida0" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.facebook.com/hom.mie.608859" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/naridakh/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://discord.gg/2TjPD2Zm" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a>
         </div>
       </div>
-      
+      <div class="cmsterm-nav">
+        <a href="#cmsterm" data-aos="flip-down">
+          ข้ามไปอ่านข้อตกลง
+        </a>
+      </div>
     </div>
   </div>
 </header>
@@ -78,24 +81,20 @@
         </div>
       </a>
 
-      <div class="option-mcskin" data-aos="flip-down">
-        <img src="image/minecraft skin rotate/mcskin-tai.gif" alt="">
-        <h3>Minecraft Skin</h3>
-        <p>64x64 px ใส่ได้ทั้ง java และ pe</p>
-      </div>
+      <a href="#mcskin" data-aos="flip-down">
+        <div class="option-mcskin">
+          <img src="image/minecraft skin rotate/mcskin-tai.gif" alt="">
+          <h3>Minecraft Skin</h3>
+          <p>64x64 px ใส่ได้ทั้ง java และ pe</p>
+        </div>
+      </a>
 
     </div>
   </div>
 
 <main>
 
-      <a href="#cmsterm" data-aos="flip-down">
-        <div class="option-pixelart">
-          <h3>ข้ามไปอ่านข้อตกลง</h3>
-        </div>
-      </a>
-
-  <div class="cms-container">
+<div class="cms-container">
   <div class="cms-wrapper">
     <div class="leaf-wrapper">
       <img src="image/Leaves/feb_fang_88 [Converted]5.webp" class="leaf leaf1" >
@@ -342,27 +341,73 @@
       </div>
 
       </div>
-      <!-- PIxel Art -->
+      <!-- PIxel Art--------------------------------------------------->
       <div class="pixelart" id="pixelart">
         <h2>Pixel Art</h2>
         <h3>พิกเซลอาร์ต</h3>
         <hr>
+
+      <div class="cms-box" data-aos="fade-in">
+        <h2>High-res sprite</h2>
+        <h3>เสกลใหญ่</h3>
+        <p>ขนาดประมาณ 128px ขึ้นไป</p>
+        <div class="image-wrapper">
+          <img 
+            src="image/CMS image/Pixelart/mr.heartman-Recovered.png" 
+            data-full="image/CMS image/Pixelart/mr.heartman-Recovered.png" 
+            class="thumbnail" onclick="openLightbox(this)"
+          />
+
+          <img 
+            src="image/CMS image/Pixelart/Zami-cover.png" 
+            data-full="image/CMS image/Pixelart/Zami-cover.png"
+            class="thumbnail" onclick="openLightbox(this)"
+          />
+        </div>
+        <h4>200-500 THB</h4>
+        <img src="image/Leaves/feb_fang_88 [Converted].webp" class="leaf leaf2">
+        <hr>
+      </div>
+
+      <div class="cms-box" data-aos="fade-in">
+        <h2>Tiny sprite</h2>
+        <h3>เสกลเล็ก</h3>
+        <p>ขนาดประมาน 64px หรือน้อยกว่า</p>
+        <div class="tinysprite">
+         <img 
+            src="image/CMS image/Pixelart/KaopunSprite-.webp" 
+            data-full="image/CMS image/Pixelart/KaopunSprite-.webp"
+            class="thumbnail" onclick="openLightbox(this)"
+          />
+        </div>
+        <h4>60-100 THB/ 1 character</h4>
+        <img src="image/Leaves/feb_fang_88 [Converted].webp" class="leaf leaf2">
+        <hr>
+      </div>     
+      </div>
+      <!-- Mc ---------------------------------------------------------->
+        <div class="mcskin" id="mcskin">
+        <h2>Minecraft skin</h2>
+        <h3>สกินไมน์คราฟท์</h3>
+      <div class="cms-box" data-aos="fade-in">
+        <p>ขนาด 64x64 px ใส่ได้ท้ัง java และ pe</p>
+        <h4>200 THB/ 1 character</h4>
+        <h4>เพิ่มชุด แก้งาน 50-100 THB</h4>
+        <hr>
+      </div>     
       </div>
     </div>
-
-      
     </div>
   </div>
+</div>
 
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <span class="close-btn" onclick="closeLightbox()">&times;</span>
     <img class="lightbox-img" id="lightbox-img" src="" />
   </div>
-   <!-- Pixel Art -->
 
-   <!-- Minecraft skin -->
 <div class="cmsterm-warpper">
-   <div class="cmsterm" id="cmsterm">
+   <div class="cmsterm" id="cmsterm" data-aos="flip-right">
         <h3>COMMISSION TERMS</h3>
         <h4>ข้อตกลง/รายละเอียด</h4>
         
@@ -447,21 +492,19 @@
   </div>
 </footer>
 </body>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-      document.addEventListener('aos:in', ({ detail }) => {
-    console.log('animated in', detail);
-  });
-
-  document.addEventListener('aos:out', ({ detail }) => {
-    console.log('animated out', detail);
-  });
-  </script>
-
 </html>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+    document.addEventListener('aos:in', ({ detail }) => {
+  console.log('animated in', detail);
+});
+
+document.addEventListener('aos:out', ({ detail }) => {
+  console.log('animated out', detail);
+});
+</script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   if (!('IntersectionObserver' in window)) return; // รองรับเบราว์เซอร์เก่า

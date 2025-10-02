@@ -10,6 +10,7 @@ h1 ,h2 ,h3 , h4 ,p {
 body{
     background-color: rgb(21, 28, 26);
     overflow-x: hidden;
+
 }
 
 h1{
@@ -87,6 +88,28 @@ main{
     padding: 6px;
 }
 
+.cmsterm-nav a{
+  text-decoration: none;
+  color: #1a2114;
+}
+
+.cmsterm-nav{
+  background-color: #c36b23;
+  font-family: kanit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: auto;
+  margin-top: 12px;
+  max-width: fit-content;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 1rem;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cmsterm-nav:hover{
+  background-color: #edc557;
+}
 p{
     margin: 0;
 }
@@ -211,11 +234,28 @@ p{
     font-size: 1.4rem;
    }
 }
+
 .option-painting img{
     border-radius: 50%;
     object-fit: cover;
 }
 
+@media (max-width: 500px) {
+  .option div{
+    height: 200px;
+    max-width: 100px;
+    padding: 10px;
+    margin: 3px;
+  }
+  .option h3{
+    font-size: 19px;
+    line-height: 15px;
+  }
+  .option p {
+    font-size: 0.8rem;
+        line-height: 15px;
+  }
+}
 /* Cms info-------------------------------------- */
 .cms-container{
     position: relative; 
@@ -316,6 +356,10 @@ p{
   transform: scale(1.05);
 }
 
+.pixelart .thumbnail:hover {
+  filter: none;
+}
+
 @media (hover: hover) and (pointer: fine) {
     .thumbnail:hover {
         filter: hue-rotate(180deg);
@@ -329,6 +373,25 @@ p{
   }
 }
 
+.pixelart .thumbnail{
+  width: 40%;
+  max-width: fit-content;
+  aspect-ratio: auto;
+}
+
+.tinysprite{
+  background-color: #f8f4e5;
+  margin-top: 1rem;
+  padding: 10px;
+}
+.tinysprite img {
+ width: 20%;
+}
+@media (max-width: 1280px){
+  .pixelart .thumbnail{
+  width: 80%;
+  }
+}
 .content hr{
   border: 1px solid rgba(194, 166, 54, 0.354);
   margin: 50px 8vw;
@@ -374,6 +437,7 @@ p{
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 /* cms term toggle */
 .cmsterm{
     background-color: #313120c2;
@@ -385,13 +449,7 @@ p{
     border-style: solid;
     border-color: #83a95f;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-  .cmsterm{ 
-    margin: 1rem 25px ;
-    max-width: none ;
-  }
+    margin-bottom: 5rem;
 }
 
 .cmsterm h3{
@@ -451,7 +509,7 @@ p{
   margin-bottom: 0;
   max-width: 20rem;
   text-align: left;
-  padding-left: 20px;
+  padding: 2px 20px;
 }
 
 .cmsterm ul{
@@ -482,14 +540,24 @@ p{
 summary{
   font-size: 1.5rem;
   background-color: #e2bc10;
+  text-align: left;
   color: #1a2114;
   margin-top: 1.2rem;
+  padding-left: 20px;
   max-width: 20rem;
+  transition: 200ms ease;
+}
+summary:hover{
+  max-width: 100%;
 }
 
 details > summary {
   cursor: pointer;
   font-weight: bold;
+}
+
+details[open] summary{
+  max-width: 100%;
 }
 
 details > summary::-webkit-details-marker {
@@ -505,6 +573,21 @@ details .commericaluse {
 /* ตอน open */
 details[open] .commericaluse {
   max-height: 1000px; /* ตั้งให้ใหญ่พอที่จะคลุมเนื้อหาหมด */
+}
+
+@media (max-width: 768px) {
+  .cmsterm{ 
+    margin: 1rem 25px ;
+    max-width: none ;
+  }
+
+  .cmsterm h6{
+    max-width: fit-content;
+  }
+
+  .cmsterm p {
+    font-size: 1rem;
+  }
 }
 
 /* credit----------------------------------------- */
