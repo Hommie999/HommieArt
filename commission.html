@@ -365,7 +365,6 @@
           />
         </div>
         <h4>200-500 THB</h4>
-        <img src="image/Leaves/feb_fang_88 [Converted].webp" class="leaf leaf2">
         <hr>
       </div>
 
@@ -381,7 +380,6 @@
           />
         </div>
         <h4>60-100 THB/ 1 character</h4>
-        <img src="image/Leaves/feb_fang_88 [Converted].webp" class="leaf leaf2">
         <hr>
       </div>     
       </div>
@@ -389,7 +387,16 @@
         <div class="mcskin" id="mcskin">
         <h2>Minecraft skin</h2>
         <h3>สกินไมน์คราฟท์</h3>
-      <div class="cms-box" data-aos="fade-in">
+        <div class="cms-box" data-aos="fade-in">
+          <div class="mc-img">
+            <img src="image/minecraft skin rotate/mcskin-seawitch.gif" alt="">
+            <img src="image/minecraft skin rotate/mcskin-taue.gif" alt="">
+            <img src="image/minecraft skin rotate/mcskin-nattha.gif" alt="">
+            <img src="image/minecraft skin rotate/mcskin-luice.gif" alt="">
+            <img src="image/minecraft skin rotate/mcskin-secret.gif" alt="">
+            <img src="image/minecraft skin rotate/mcskin-tingting.gif" alt="">
+          </div>
+
         <p>ขนาด 64x64 px ใส่ได้ท้ัง java และ pe</p>
         <h4>200 THB/ 1 character</h4>
         <h4>เพิ่มชุด แก้งาน 50-100 THB</h4>
@@ -496,6 +503,7 @@
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
+  // AOS--------------------------------------------------
   AOS.init();
     document.addEventListener('aos:in', ({ detail }) => {
   console.log('animated in', detail);
@@ -504,8 +512,7 @@
 document.addEventListener('aos:out', ({ detail }) => {
   console.log('animated out', detail);
 });
-</script>
-<script>
+// Lazy Loading---------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   if (!('IntersectionObserver' in window)) return; // รองรับเบราว์เซอร์เก่า
 
@@ -533,6 +540,36 @@ document.addEventListener("DOMContentLoaded", function () {
     img.classList.add('lazy');
     observer.observe(img);
   });
+});
+
+// ขยายรูปภาพ หน้า cms--------------------------------------
+// เปิด Lightbox
+function openLightbox(img) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  
+  // ดึงรูปต้นฉบับจาก data-full
+  lightboxImg.src = img.dataset.full;
+  
+  // แสดง Lightbox
+  lightbox.style.display = "flex";
+  
+  // ป้องกัน scroll พื้นหลัง
+  document.body.style.overflow = "hidden";
+}
+
+// ปิด Lightbox
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  lightbox.style.display = "none";
+  document.body.style.overflow = ""; // คืนค่า scroll
+}
+
+// ปิด Lightbox เมื่อกดปุ่ม Esc
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    closeLightbox();
+  }
 });
 </script>
 
