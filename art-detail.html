@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>รายละเอียดผลงาน</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/theme.css" />
+  <link rel="stylesheet" href="CSS/art-detail.css" />
+  <link rel="icon" type="image/ico" href="image/Gai.png">
+  <!-- Javascript -->
+  <script src="JS/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- แถบนำทาง -->
+  <div id="navbar"></div>
+
+  <!-- ปุ่มกลับ -->
+  <div class="back-button">
+    <a href="artwork.html"><i class="fas fa-arrow-left"></i> กลับแกลเลอรี</a>
+  </div>
+
+  <!-- ที่แสดงผลงาน -->
+  <div id="artwork-detail" class="artwork-detail">
+    <p>กำลังโหลดผลงาน... 🎨</p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+  // ดึงค่า id จาก URL
+const urlParams = new URLSearchParams(window.location.search);
+const artworkId = urlParams.get('id');
+
+if (!artworkId) {
+  document.getElementById('artwork-detail').innerHTML = 
+    '<p class="error">❌ ไม่พบข้อมูลผลงาน</p>';
+} else {
+  // โหลดข้อมูลผลงาน
+  fetch('artwork.json')
+    .then(response => response.json())
+    .then(artworks => {
+      const artwork = artworks.find(art => art.id === artworkId);
+      
+      if (!artwork) {
+        document.getElementById('artwork-detail').innerHTML = 
+          '<p class="error">❌ ไม่พบผลงานนี้</p>';
+        return;
+      }
+
+      // สร้าง HTML
+      let html = `
+        <h1 class="artwork-title">${artwork.title}</h1>
+        <div class="artwork-meta">${artwork.date} • ${artwork.year}</div>
+        <img src="${artwork.mainImage}" alt="${artwork.title}" class="artwork-main-image">
+        <div class="artwork-description">${artwork.description}</div>
+      `;
+
+      // แสดงรูปกระบวนการ (ถ้ามี)
+      if (artwork.processImages && artwork.processImages.length > 0) {
+        html += `
+          <div class="process-section">
+            <h3>ขั้นตอนการทำงาน</h3>
+            <div class="process-grid">
+              ${artwork.processImages.map(img => 
+                `<img src="${img}" alt="Process">`
+              ).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // ลูกศรไปผลงานถัดไป/ก่อนหน้า
+      const currentIndex = artworks.findIndex(art => art.id === artworkId);
+      const prevArt = currentIndex > 0 ? artworks[currentIndex - 1] : null;
+      const nextArt = currentIndex < artworks.length - 1 ? artworks[currentIndex + 1] : null;
+
+      html += `<div class="nav-arrows">`;
+      if (prevArt) {
+        html += `<a href="art-detail.html?id=${prevArt.id}"><i class="fas fa-arrow-left"></i> ผลงานก่อนหน้า</a>`;
+      } else {
+        html += `<span></span>`;
+      }
+      if (nextArt) {
+        html += `<a href="art-detail.html?id=${nextArt.id}">ผลงานถัดไป <i class="fas fa-arrow-right"></i></a>`;
+      } else {
+        html += `<span></span>`;
+      }
+      html += `</div>`;
+
+      document.getElementById('artwork-detail').innerHTML = html;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      document.getElementById('artwork-detail').innerHTML = 
+        '<p class="error">❌ โหลดข้อมูลไม่สำเร็จ</p>';
+    });
+}</script>
+</body>
+</html>

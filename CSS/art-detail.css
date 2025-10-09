@@ -1,0 +1,129 @@
+body{
+    background-color: #fdf9f9;
+}
+/* ปุ่มกลับ */
+.back-button {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.back-button a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+.back-button a:hover {
+  text-decoration: underline;
+}
+
+/* คอนเทนเนอร์หลัก */
+.artwork-detail {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+/* ชื่อผลงาน */
+.artwork-title {
+  font-size: 2.2rem;
+  margin: 1.5rem 0 0.5rem;
+  color: #222;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* วันที่/ปี */
+.artwork-meta {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* รูปหลัก */
+.artwork-main-image {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  display: block;
+  margin: 1.5rem 0;
+}
+
+/* คำอธิบาย */
+.artwork-description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 1.5rem 0;
+  text-align: center;
+  white-space: pre-line; /* รักษาการขึ้นบรรทัดใหม่ในข้อความ */
+}
+
+/* ส่วนรูปกระบวนการ */
+.process-section {
+  margin-top: 2.5rem;
+}
+
+.process-section h3 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: #444;
+  font-size: 1.5rem;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 1rem;
+}
+
+.process-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.process-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ปุ่มลูกศรไปผลงานถัดไป/ก่อนหน้า */
+.nav-arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding: 0 1rem;
+}
+
+.nav-arrows a {
+  padding: 0.6rem 1.2rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #eee;
+}
+
+.nav-arrows a:hover {
+  background: #eef;
+  border-color: #ddd;
+}
+
+/* มือถือ */
+@media (max-width: 600px) {
+  .artwork-title { font-size: 1.8rem; }
+  .process-grid { grid-template-columns: 1fr; }
+  .nav-arrows { flex-direction: column; gap: 10px; }
+  .nav-arrows a { justify-content: center; }
+}

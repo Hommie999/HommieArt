@@ -17,6 +17,101 @@
 <body>
 <!-- แถบนำทาง  ================= -->
 <div id="navbar"></div>
-    <p class="notice">🪴🌳🌿 หน้านี้ยังอยู่ระหว่างการก่อสร้าง 🏗️🗼⛏️</p>
-</body>
+
+<!-- หมวดปี -->
+<div class="year-filter">
+  <button class="filter-btn active" data-filter="all">Main</button>
+  <button class="filter-btn" data-filter="2025">2025</button>
+  <button class="filter-btn" data-filter="2024">2024</button>
+  <button class="filter-btn" data-filter="2023">2023</button>
+</div>
+
+<div id="gallery-container" class="gallery-container">
+  <p>กำลังโหลดผลงาน... 🎨</p>
+</div>
+
 </html>
+
+<script>
+// 2. โหลดข้อมูลผลงานจาก JSON
+let allArtworks = [];
+// โหลดข้อมูล
+fetch('artwork.json')
+  .then(res => res.json())
+  .then(data => {
+    allArtworks = data;
+    renderGallery('all');
+  })
+  .catch(err => {
+    document.getElementById('gallery-container').innerHTML = 
+      '<p>❌ โหลดผลงานไม่ได้ กรุณาตรวจสอบไฟล์ data/artworks.json</p>';
+  });
+
+// จัดกลุ่มผลงานตามปี (เรียงใหม่ไปเก่า)
+function groupByYear(works) {
+  const groups = {};
+  works.forEach(art => {
+    if (!groups[art.year]) groups[art.year] = [];
+    groups[art.year].push(art);
+  });
+  return Object.keys(groups)
+    .sort((a, b) => b - a)
+    .map(year => ({ year: parseInt(year), artworks: groups[year] }));
+}
+
+// สร้าง HTML สำหรับผลงานแต่ละชิ้น
+function createItem(art) {
+  return `
+    <div class="artwork-item">
+      <a href="art-detail.html?id=${art.id}">
+        <img src="${art.mainImage}" alt="${art.title}" loading="lazy">
+        <h3>${art.title}</h3>
+        <p class="art-year">${art.year}</p>
+      </a>
+    </div>
+  `;
+}
+
+// เรนเดอร์แกลเลอรี
+function renderGallery(filter) {
+  const container = document.getElementById('gallery-container');
+  
+  if (filter === 'all') {
+    // แสดงทุกปีแบบจัดกลุ่ม
+    const groups = groupByYear(allArtworks);
+    let html = '';
+    groups.forEach(group => {
+      html += `<h2 class="year-header">${group.year}</h2>`;
+      html += `<div class="masonry-grid">`;
+      group.artworks.forEach(art => html += createItem(art));
+      html += `</div>`;
+    });
+    container.innerHTML = html || '<p>ยังไม่มีผลงานค่ะ 🌸</p>';
+  } else {
+    // แสดงเฉพาะปีที่เลือก
+    const year = parseInt(filter);
+    const filtered = allArtworks.filter(art => art.year === year);
+    if (filtered.length === 0) {
+      container.innerHTML = `<h2 class="year-header">${year}</h2><p>ไม่มีผลงานในปีนี้ค่ะ 🌼</p>`;
+    } else {
+      container.innerHTML = `
+        <h2 class="year-header">${year}</h2>
+        <div class="masonry-grid">
+          ${filtered.map(createItem).join('')}
+        </div>
+      `;
+    }
+  }
+}
+
+// ตั้งค่าปุ่มเมื่อโหลดหน้า
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderGallery(btn.dataset.filter);
+    });
+  });
+});
+</script>

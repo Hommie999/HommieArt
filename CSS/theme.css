@@ -17,18 +17,6 @@ body {
   background-color: rgb(21, 28, 26);
 }
 
-/* ตัวเลื่อน (thumb) */
-::-webkit-scrollbar-thumb {
-  background-color: #ff6600; /* สีตัวเลื่อน */
-  border-radius: 6px;        /* ให้โค้งมน */
-}
-
-/* พื้นหลัง scrollbar */
-::-webkit-scrollbar-track {
-  background-color: #f0f0f0; /* สีแถบด้านหลัง */
-  border-radius: 6px;
-}
-
 .notice{
   font-family: kanit;
   font-size: 1.8rem;
