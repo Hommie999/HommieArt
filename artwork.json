@@ -1,29 +1,23 @@
 [
   {
-    "id": "sunset-2023",
-    "title": "แสงสุดท้ายของฤดูร้อน",
-    "year": 2023,
-    "date": "2023-08-15",
-    "description": "วาดจากความทรงจำตอนไปทะเลกับเพื่อน...",
-    "mainImage": "image/Hommie-halfbody-Ilovemybf.jpg",
-    "processImages": ["image/2023/sunset-sketch.jpg"]
+    "id": "soroblox",
+    "title": "So Roblox",
+    "year": 2025,
+    "date": "15 7",
+    "description": "อวตารเกม Roblox",
+    "mainImage": "image/artwork/soroblox.jpg",
+    "subImage": [
+      {"url":"image/element/sorobloxcapture.png", "caption": "refference"}
+    ],
+    "timelapse": ["video/soroblox.mp4"]
   },
   {
-    "id": "cat-dream-2024",
-    "title": "แมวเหมียวในฝัน",
+    "id": "gaikai",
+    "title": "Fuu",
     "year": 2024,
-    "date": "2024-02-10",
-    "description": "ดิจิทัลอาร์ตสไตล์ฝันๆ ที่อยากให้ทุกคนหลับฝันดี",
-    "mainImage": "image/lemonlordcover.jpg",
-    "processImages": []
-  },
-  {
-    "id": "cat-dreams-2024",
-    "title": "แมวเหมียวในฝัน",
-    "year": 2024,
-    "date": "2024-02-10",
-    "description": "ดิจิทัลอาร์ตสไตล์ฝันๆ ที่อยากให้ทุกคนหลับฝันดี",
-    "mainImage": "image/Mind1.jpg",
-    "processImages": []
+    "date": "18 ตุลาคม",
+    "description": "Art trade กับ ไก่ใครไม่อาบน้ำ❤️",
+    "mainImage": "image/CMS image/Headshot-lineart/GaiKai.jpg",
+    "timelapse": ["video/GaiKai.mp4"]
   }
 ]

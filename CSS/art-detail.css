@@ -1,5 +1,5 @@
 body{
-    background-color: #fdf9f9;
+  background-color: #ecf2d4;
 }
 /* ปุ่มกลับ */
 .back-button {
@@ -25,13 +25,13 @@ body{
 .artwork-detail {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 1.5rem 3rem;
+  padding: 0 0rem 3rem;
 }
 
 /* ชื่อผลงาน */
 .artwork-title {
   font-size: 2.2rem;
-  margin: 1.5rem 0 0.5rem;
+  margin: 1.5rem 0 0.2rem;
   color: #222;
   text-align: center;
   font-weight: 700;
@@ -41,7 +41,6 @@ body{
 .artwork-meta {
   text-align: center;
   color: #666;
-  margin-bottom: 2rem;
   font-size: 1.1rem;
 }
 
@@ -59,9 +58,38 @@ body{
   font-size: 1.15rem;
   line-height: 1.7;
   color: #333;
-  margin: 1.5rem 0;
+  margin-bottom: 1.5rem;
   text-align: center;
   white-space: pre-line; /* รักษาการขึ้นบรรทัดใหม่ในข้อความ */
+}
+
+.subImage-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subImage-section h3{
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.subImage-section img{
+ width: 100%;
+}
+
+.subImage-caption {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.subImage-grid {
+  gap: 16px;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 /* ส่วนรูปกระบวนการ */
@@ -77,21 +105,14 @@ body{
 }
 
 .process-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
+  padding: 1rem;
   margin-top: 1rem;
 }
 
-.process-grid img {
+.process-grid video {
   width: 100%;
-  border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s;
-}
-
-.process-grid img:hover {
-  transform: scale(1.03);
 }
 
 /* ปุ่มลูกศรไปผลงานถัดไป/ก่อนหน้า */

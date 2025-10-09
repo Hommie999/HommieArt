@@ -23,7 +23,6 @@
 
   <!-- ที่แสดงผลงาน -->
   <div id="artwork-detail" class="artwork-detail">
-    <p>กำลังโหลดผลงาน... 🎨</p>
   </div>
 
   <!-- JavaScript -->
@@ -50,20 +49,39 @@ if (!artworkId) {
 
       // สร้าง HTML
       let html = `
-        <h1 class="artwork-title">${artwork.title}</h1>
-        <div class="artwork-meta">${artwork.date} • ${artwork.year}</div>
         <img src="${artwork.mainImage}" alt="${artwork.title}" class="artwork-main-image">
+        <h1 class="artwork-title">${artwork.title}</h1>
+        <div class="artwork-meta">${artwork.date}${artwork.year}</div>
         <div class="artwork-description">${artwork.description}</div>
       `;
 
+      // แสดงรูปอื่นๆ (ถ้ามี)
+      if (artwork.subImage && artwork.subImage.length > 0) {
+        html += `
+          <div class="subImage-section">
+            <div class="subImage-grid">
+              <h3>รูปภาพอื่นๆ</h3>
+              ${artwork.subImage.map(item => 
+                `<div class="subImage-item">
+                  <img src="${item.url}" alt="${item.caption || 'Process image'}">
+                  <p class="subImage-caption">${item.caption || ''}</p>
+                </div>`
+              ).join('')}
+            </div>
+          </div>
+        `;
+      }
+
       // แสดงรูปกระบวนการ (ถ้ามี)
-      if (artwork.processImages && artwork.processImages.length > 0) {
+      if (artwork.timelapse && artwork.timelapse.length > 0) {
         html += `
           <div class="process-section">
-            <h3>ขั้นตอนการทำงาน</h3>
+            <h3>Time Lapse</h3>
             <div class="process-grid">
-              ${artwork.processImages.map(img => 
-                `<img src="${img}" alt="Process">`
+              ${artwork.timelapse.map(video => 
+                `<video controls>
+                  <source src="${video}" type="video/mp4">
+                </video>`
               ).join('')}
             </div>
           </div>

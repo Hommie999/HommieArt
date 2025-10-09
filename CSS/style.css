@@ -154,43 +154,6 @@
   align-items: center;
 }
 
-/* สำหรับหน้าจอกว้าง */
-@media screen and (min-width: 992px) {
-  .profile-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 1rem;
-    gap: 1rem;
-    max-width: 1200px; /* หรือ 1200px ตามที่ดูสวย */
-    margin: 0 auto; /* จัดให้อยู่กลางหน้าจอ */
-  }
-
-  .profile-container {
-    flex: 3;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin: 0;
-  }
-
-  .introduce-container {
-    flex: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;  /* ให้ข้อความชิดซ้าย */
-    text-align: left;
-    justify-content: flex-start;
-  }
-
-  .introduce-detail {
-    max-width: 600px;
-    width: 100%;
-    margin: 1rem 0;
-  }
-}
-
 .profile-container {
   display: flex;
   justify-content: center;   
@@ -200,7 +163,7 @@
 
 .proflie-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
   object-fit: cover;
   filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.665));
@@ -257,6 +220,47 @@
   color: #b1ce58;
   letter-spacing: 5px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* เงานิดหน่อยให้ดูนุ่ม */
+}
+
+/* สำหรับหน้าจอกว้าง */
+@media screen and (min-width: 992px) {
+  .profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 1200px; /* หรือ 1200px ตามที่ดูสวย */
+    margin: 0 auto; /* จัดให้อยู่กลางหน้าจอ */
+  }
+
+  .profile-container {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .introduce-container {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* ให้ข้อความชิดซ้าย */
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .introduce-detail {
+    max-width: 600px;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .proflie-image{
+    max-width: 300px;
+  }
 }
 
 /* lemon lord -----------------------------------------------------*/

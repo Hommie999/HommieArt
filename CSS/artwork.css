@@ -11,7 +11,7 @@ body{
   padding: 0.6rem 1.4rem;
   margin: 0 0.5rem;
   border: none;
-  background: #f0f0f0;
+  background: #ffffff;
   color: #333;
   font-size: 1.05rem;
   border-radius: 30px;
@@ -21,8 +21,8 @@ body{
 
 .filter-btn:hover { background: #e0e0e0; }
 .filter-btn.active {
-  background: #4CAF50;
-  color: white;
+  background: #86c04c;
+  color: rgb(255, 255, 255);
   box-shadow: 0 2px 6px rgba(76,175,80,0.3);
 }
 
@@ -34,44 +34,39 @@ body{
 }
 
 .gallery-container {
-  padding: 0 1.5rem 3rem;
+  padding: 0 1.5rem 0rem;
 }
 
 .masonry-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+  gap: 10px;
   margin-bottom: 2.5rem;
 }
 
 .artwork-item a {
   text-decoration: none;
-  color: inherit;s
+  color: inherit;
   display: block;
 }
 
 .artwork-item img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.25s;
 }
-
+x
 .artwork-item img:hover { transform: translateY(-6px); }
-
-.artwork-item h3 {
-  margin: 12px 0 6px;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.art-year {
-  color: #666;
-  margin: 0;
-  font-size: 0.95rem;
-}
 
 @media (max-width: 600px) {
   .masonry-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+.social-links i{
+  color: #4c4141;
+}
+
+footer{
+  margin-bottom: 10px;
 }
