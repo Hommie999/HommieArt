@@ -5,6 +5,7 @@
     <title>My Artwork</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio website of Hommie, freelance illustrator from Thailand. Explore digital art, traditional art, and tote bag designs." />
+    <meta property="og:image" content="https://hommieart.netlify.app/image/asset/card.png">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="CSS/theme.css" /> 
     <link rel="stylesheet" type="text/css" href="CSS/artwork.css" />
@@ -17,6 +18,8 @@
 <body>
 <!-- แถบนำทาง  ================= -->
 <div id="navbar"></div>
+
+<h1>Art Work</h1>
 
 <!-- หมวดปี -->
 <div class="year-filter">
@@ -93,7 +96,7 @@ function renderGallery(filter) {
     const groups = groupByYear(allArtworks);
     let html = '';
     groups.forEach(group => {
-      html += `<h2 class="year-header">${group.year}</h2>`;
+      html += `<h2 class="year-header">${group.year}</h2> <hr>`;
       html += `<div class="masonry-grid">`;
       group.artworks.forEach(art => html += createItem(art));
       html += `</div>`;
@@ -104,10 +107,11 @@ function renderGallery(filter) {
     const year = parseInt(filter);
     const filtered = allArtworks.filter(art => art.year === year);
     if (filtered.length === 0) {
-      container.innerHTML = `<h2 class="year-header">${year}</h2><p>ไม่มีผลงานในปีนี้ค่ะ 🌼</p>`;
+      container.innerHTML = `<h2 class="year-header">${year}</h2> <hr> <p>ไม่มีผลงานในปีนี้ค่ะ 🌼</p>`;
     } else {
       container.innerHTML = `
         <h2 class="year-header">${year}</h2>
+        <hr>
         <div class="masonry-grid">
           ${filtered.map(createItem).join('')}
         </div>

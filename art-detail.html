@@ -16,14 +16,17 @@
   <!-- แถบนำทาง -->
   <div id="navbar"></div>
 
+<main>
   <!-- ปุ่มกลับ -->
-  <div class="back-button">
+  <div class="back-button" >
     <a href="artwork.html"><i class="fas fa-arrow-left"></i> กลับแกลเลอรี</a>
   </div>
-
   <!-- ที่แสดงผลงาน -->
   <div id="artwork-detail" class="artwork-detail">
   </div>
+</main>
+</body>
+</html>
 
   <!-- JavaScript -->
   <script>
@@ -50,7 +53,7 @@ if (!artworkId) {
       // สร้าง HTML
       let html = `
         <img src="${artwork.mainImage}" alt="${artwork.title}" class="artwork-main-image">
-        <h1 class="artwork-title">${artwork.title}</h1>
+        <h1 class="artwork-title">『${artwork.title}』</h1>
         <div class="artwork-meta">${artwork.date}${artwork.year}</div>
         <div class="artwork-description">${artwork.description}</div>
       `;
@@ -114,5 +117,3 @@ if (!artworkId) {
         '<p class="error">❌ โหลดข้อมูลไม่สำเร็จ</p>';
     });
 }</script>
-</body>
-</html>

@@ -16,8 +16,152 @@
     "title": "Fuu",
     "year": 2024,
     "date": "18 ตุลาคม",
-    "description": "Art trade กับ ไก่ใครไม่อาบน้ำ❤️",
+    "description": "นี่คือภาพของเจ้าฟู Oc ของคุณ <a href=\"https://www.facebook.com/huhn.hachi\" target=\"_blank\" style=\"color: #e5c8ff; text-decoration: none; font-weight: bold;\">Huhn Hachi</a>",
     "mainImage": "image/CMS image/Headshot-lineart/GaiKai.jpg",
     "timelapse": ["video/GaiKai.mp4"]
+  },
+  {
+    "id": "ilovemybf",
+    "title": "I love My BF",
+    "year": 2024,
+    "date": "18 ตุลาคม",
+    "description": "ผลงานเมื่อปี 2024",
+    "mainImage": "image/CMS image/FullBody/ilovemyBF.jpg"
+  },
+  {
+    "id": "tanabata2025",
+    "title": "Tanabata 2025",
+    "year": 2025,
+    "date": "28 06",
+    "description": "ผลงานจากการเข้าร่วมการแข่งขันวาดภาพในกิจกรรมทานาบาตะของโรงเรียน หัวข้อ เทศกาลทานาบาตะ",
+    "mainImage": "image/tanabata.png"
+  },
+  {
+    "id": "whitedancer",
+    "title": "White Dancer",
+    "year": 2025,
+    "date": "07 08",
+    "description": "รูปภาพนี้ได้ต้นแบบตัวละครมาจากคุณ<a href=\"https://x.com/HeavenGutter\" target=\"_blank\" style=\"color: #e5c8ff; text-decoration: none; font-weight: bold;\">Heaven Gutter</a>",
+    "mainImage": "image/TheDancer.jpg"
+  },
+  {
+    "id": "We",
+    "title": "We",
+    "year": 2024,
+    "date": "07 02",
+    "description": "เทคนิค: หมึก/สีน้ำบนกระดาษ A4",
+    "mainImage": "image/We.jpg"
+  },
+  {
+    "id": "Wee",
+    "title": "Wee",
+    "year": 2023,
+    "date": "17 06",
+    "description": "เทคนิค: หมึกบนกระดาษ A4",
+    "mainImage": "image/Wee.jpg"
+  },
+  {
+    "id": "palatecolor",
+    "title": "Palatecolor",
+    "year": 2024,
+    "date": "4 04",
+    "description": "รูปวาดจากชาเลนจ์ 1 pallate 4 artistที่เล่นกับเพื่อนๆ",
+    "mainImage": "image/Palatecolor.webp"
+  },
+    {
+    "id": "Mydarling",
+    "title": "My Darling",
+    "year": 2023,
+    "date": "01 05",
+    "description": "เทคนิค: หมึกบนกระดาษ A4 / ตัดแปะ",
+    "mainImage": "image/My Darling.jpg"
+  },
+  {
+    "id": "whiteholly",
+    "title": "White Holly",
+    "year": 2025,
+    "date": "10 10",
+    "description": "ฝึกใช้เปอร์สเป็คทีฟกับตัวละคร",
+    "mainImage": "image/artwork/whiteholly.png"
+  },
+  {
+    "id": "Boo",
+    "title": "โบ๋",
+    "year": 2025,
+    "date": "10 7",
+    "description": "fanart ตันตันจากเลมอนหลอดกับน้องโบ๋จากเรื่องโบ๋ๆของคุณ</p><a href=\"https://www.facebook.com/profile.php?id=100094383456888\" target=\"_blank\" style=\"color: #fff;text-decoration: none; font-weight: bold;\">Kodchaff</a>",
+    "mainImage": "image/CMS image/FullCG/boofullCG-thumb.webp"
+  },
+  {
+    "id": "minisusan",
+    "title": "Minisusan",
+    "year": 2024,
+    "date": "28 Dec",
+    "description": "Redraw ผลงานตัวเอง",
+    "mainImage": "image/CMS image/Headshot-noline/minisusan-thumb.jpg"
+  },
+  {
+    "id": "BusinessGirl",
+    "title": "Business Girl (No.4)",
+    "year": 2024,
+    "date": "22 02",
+    "description": "เทคนิค สีน้ำบนกระดาษร้อยปอนด์ A4 \"ผู้หญิงเข้าสังคมไม่เก่ง ทำแต่งาน ไม่ดูแลตัวเอง ประสบความสำเร็จแต่ชีวิตว่างเปล่าและน่าเบื่อ ในขณะที่โลกข้างหลังของเธอเต็มไปด้วยสีสันของผู้คนมากมาย\"",
+    "mainImage": "image/artwork/Business Girl.jpg"
+  },
+  {
+    "id": "mikufa",
+    "title": "Miku Fanart",
+    "year": 2024,
+    "date": "27 03",
+    "description": "แฟนอาร์ตสีน้ำ ตัวละคร Hatsune Miku",
+    "mainImage": "image/artwork/mikufa.jpg"
+  },
+  {
+    "id": "mind3",
+    "title": "Mind(3)",
+    "year": 2024,
+    "date": "08 03",
+    "description": "ก็แค่สาวต้นไม้ ไม่มีอะไรมากไปกว่านั้น หรือมากไปกว่านั้น",
+    "mainImage": "image/artwork/mind3.jpg"
+  },
+  {
+    "id": "sakana",
+    "title": "Sakana Dish",
+    "year": 2025,
+    "date": "14 04",
+    "description": "งานวาดเทรดกับพี่ตูน Patiparn Poosee",
+    "mainImage": "image/CMS image/HalfBody/sakana-thumb.jpg"
+  },
+  {
+    "id": "tracksuitMan",
+    "title": "TracksuitMan",
+    "year": 2024,
+    "date": "20 08",
+    "description": "",
+    "mainImage": "image/CMS image/HalfBody/tracksuitMan-thumb.webp"
+  },
+  {
+    "id": "Panwan",
+    "title": "Panwan",
+    "year": 2025,
+    "date": "08 02",
+    "description": "ได้แรงบัลดาลใจมาจากเพื่อนที่โรงเรียนที่ชอบติดโบว์ใหญ่ๆ",
+    "mainImage": "image/CMS image/Headshot-noline/Panwan-thumb.webp"
+  },
+  {
+    "id": "redholly",
+    "title": "Red Holly",
+    "year": 2025,
+    "date": "21 07",
+    "description": "โฮลลี่ (แค่สีแดง)",
+    "mainImage": "image/CMS image/Headshot-noline/redholly-thumb.webp"
+  },
+  {
+    "id": "chew2025",
+    "title": "CHEW 2025",
+    "year": 2025,
+    "date": "30 06",
+    "description": "CHEW วาดและดีไซน์ใหม่ในปี 2025",
+    "mainImage": "image/CMS image/KneeUp/chew2025-thumb.webp"
   }
 ]

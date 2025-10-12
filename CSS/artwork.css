@@ -1,12 +1,16 @@
-body{
-  background-color: #ecf2d4;
-}
+
 .year-filter {
   text-align: center;
   margin: 2rem 0;
   padding: 0 1rem;
 }
 
+h1{
+  color: beige;
+  font-size: 3rem;
+  text-align: center;
+  font-family:"Orbitron";
+}
 .filter-btn {
   padding: 0.6rem 1.4rem;
   margin: 0 0.5rem;
@@ -27,12 +31,17 @@ body{
 }
 
 .year-header {
+  font-family: "Orbitron";
   font-size: 2rem;
   margin: 2.5rem 0 1.2rem;
   text-align: center;
-  color: #222;
+  color: #c05f26;
 }
 
+hr{
+  border: 1px solid rgba(194, 166, 54, 0.354);
+  margin: 50px 8vw;
+}
 .gallery-container {
   padding: 0 1.5rem 0rem;
 }
