@@ -90,7 +90,10 @@
     "year": 2025,
     "date": "10 7",
     "description": "fanart ตันตันจากเลมอนหลอดกับน้องโบ๋จากเรื่องโบ๋ๆของคุณ</p><a href=\"https://www.facebook.com/profile.php?id=100094383456888\" target=\"_blank\" style=\"color: #fff;text-decoration: none; font-weight: bold;\">Kodchaff</a>",
-    "mainImage": "image/CMS image/FullCG/boofullCG-thumb.webp"
+    "mainImage": "image/CMS image/FullCG/boofullCG-thumb.webp",
+    "subImage": [
+      {"url":"image/artwork/Boo2.png", "caption": "เวอร์ชั่นเรียบ"}
+    ]
   },
   {
     "id": "minisusan",
@@ -163,5 +166,29 @@
     "date": "30 06",
     "description": "CHEW วาดและดีไซน์ใหม่ในปี 2025",
     "mainImage": "image/CMS image/KneeUp/chew2025-thumb.webp"
+  },
+  {
+    "id": "totebag1",
+    "title": "กระเป๋าผ้าลายดอกไม้ 1",
+    "year": 2025,
+    "date": "1 02",
+    "description": "เพ้นท์สีอะคลิลิคบนกระเป๋าผ้า",
+    "mainImage": "image/artwork/totebag1.jpg"
+  },
+  {
+    "id": "totebag2",
+    "title": "กระเป๋าผ้าลายดอกไม้ 2",
+    "year": 2025,
+    "date": "1 02",
+    "description": "เพ้นท์สีอะคลิลิคบนกระเป๋าผ้า",
+    "mainImage": "image/artwork/totebag2.jpg"
+  },
+  {
+    "id": "totebag3",
+    "title": "กระเป๋าผ้าลายปลาวาฬ",
+    "year": 2025,
+    "date": "1 02",
+    "description": "เพ้นท์สีอะคลิลิคบนกระเป๋าผ้า",
+    "mainImage": "image/artwork/totebag3.webp"
   }
 ]

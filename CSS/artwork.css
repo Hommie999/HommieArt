@@ -6,7 +6,7 @@
 }
 
 h1{
-  color: beige;
+  color: rgb(238, 204, 13);
   font-size: 3rem;
   text-align: center;
   font-family:"Orbitron";
@@ -62,18 +62,60 @@ hr{
 .artwork-item img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.25s;
 }
-x
+
+/* Hover effect สำหรับชื่อผลงาน */
+.artwork-hover {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.artwork-hover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.artwork-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  text-align: center;
+  pointer-events: none; /* คลิกผ่านไปที่ลิงก์ได้ */
+}
+
+.artwork-item:hover .artwork-title-overlay {
+  transform: translateY(0);
+}
+
+.artwork-item:hover .artwork-hover img {
+  transform: scale(1.03);
+}
+
 .artwork-item img:hover { transform: translateY(-6px); }
 
 @media (max-width: 600px) {
-  .masonry-grid { grid-template-columns: 1fr; gap: 16px; }
+  .masonry-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .filter-btn{ margin: 2px;font-size: 0.9rem;}
+  .year-filter{padding: 0rem;}
 }
 
 .social-links i{
-  color: #4c4141;
+  color: #c1d411;
 }
 
 footer{

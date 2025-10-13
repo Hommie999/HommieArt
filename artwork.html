@@ -81,7 +81,10 @@ function createItem(art) {
   return `
     <div class="artwork-item">
       <a href="art-detail.html?id=${art.id}">
-        <img src="${art.mainImage}" alt="${art.title}" loading="lazy">
+        <div class="artwork-hover">
+          <img src="${art.mainImage}" alt="${art.title}" loading="lazy">
+          <div class="artwork-title-overlay">${art.title}</div>
+        </div>
       </a>
     </div>
   `;

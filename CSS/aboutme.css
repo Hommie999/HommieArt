@@ -1,0 +1,14 @@
+body{
+    color: aliceblue;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+}
+
+.pf{
+    width: 400px;
+    border-radius: 50%;
+}
