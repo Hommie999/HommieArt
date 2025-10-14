@@ -2,13 +2,72 @@ body{
     color: aliceblue;
 }
 
-.wrapper{
-  display: flex;
-  justify-content: center;   
-  align-items: center;
+h1{
+  text-align: center;
+  font-family: "Orbitron";
+  font-size: 1.2rem;
+  color: rgb(202, 255, 103);
+  margin: 0;
+  margin-top: 1rem;
 }
 
+.aboutme-warpper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
 .pf{
-    width: 400px;
-    border-radius: 50%;
+  width: 250px;
+  margin: 1rem;
+  border-radius: 50%;
+}
+h2{
+  margin: 0;
+  color: rgb(234, 202, 25);
+  font-size: 2.5rem;
+}
+h3{
+  margin: 0;
+  color: rgb(214, 137, 22);
+  width: fit-content;
+  padding: 5px 20px;
+  margin: 20px auto;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+h4{
+  margin: 0;
+  color: rgb(214, 137, 22);
+  font-size: 1.2rem;
+}
+
+.bd{
+  margin: 15px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  background-color: rgb(238, 219, 7);
+  color: black;
+}
+
+.itd{
+  font-size: 1rem;
+  line-height: 25px;
+  font-weight: 200;
+  margin: 0 40px;
+}
+
+hr{
+  align-self: stretch;
+  border: 1px solid rgba(234, 190, 13, 0.717);
+  margin: 10px 8vw;
+}
+
+li {
+  text-align: left ;
+  font-weight: 200;
+  line-height: 25px;
 }

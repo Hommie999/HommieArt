@@ -215,6 +215,9 @@
 
 
 .introduce-sub-text {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
   font-size: 20px;
   font-family:'Courier New', Courier, monospace;
   font-weight: 200;
@@ -222,7 +225,19 @@
   letter-spacing: 5px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* เงานิดหน่อยให้ดูนุ่ม */
 }
+.marquee {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
 
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 /* สำหรับหน้าจอกว้าง */
 @media screen and (min-width: 992px) {
   .profile-wrapper {
