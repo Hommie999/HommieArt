@@ -36,7 +36,7 @@ h3{
   padding: 5px 20px;
   margin: 20px auto;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 h4{
   margin: 0;
@@ -54,20 +54,151 @@ h4{
 }
 
 .itd{
-  font-size: 1rem;
-  line-height: 25px;
+  font-size: 1.2rem;
+  line-height: 2rem;
   font-weight: 200;
   margin: 0 40px;
+  max-width: 500px;
 }
 
+.softwares{
+  margin: 0 2rem;
+}
+
+ul{
+  padding: 0;
+}
+.softwares li{
+  list-style: none;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  color: rgb(202, 189, 77);
+  font-weight: 200;
+  text-align: left;
+}
+.softwares a{
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(28, 42, 42);
+  background-color: rgb(203, 161, 24) ;
+  padding: 7px 20px;
+  border-radius: 2rem;
+}
+
+.softwares a:hover{
+  background-color: rgb(20, 186, 167);
+}
 hr{
   align-self: stretch;
   border: 1px solid rgba(234, 190, 13, 0.717);
   margin: 10px 8vw;
 }
 
-li {
+.tools ul{
+  padding: 2rem 5rem;
+  color: rgb(234, 242, 153);
+  align-items: stretch;
+}
+
+.tools li {
   text-align: left ;
   font-weight: 200;
-  line-height: 25px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+.tools ul li:nth-child(1){ color:rgb(112, 184, 252);}
+.tools{
+  display: flex;
+  justify-content: center;   
+  text-align: center;
+  align-items: stretch;
+  margin: 2rem 1.5rem;
+}
+.tools img{
+  width: 40vw;
+  max-width: 400px;
+  object-fit: cover;
+  filter: drop-shadow(0px 0px 8px #000000ac);
+}
+
+.hobbies{
+  display: flex;
+  align-items: center;  
+  flex-direction: column;
+  margin: 2rem;
+}
+.pic{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+.hobbies img{
+  width: 50%;
+  max-width: 400px;
+  object-fit: cover;
+}
+.hobbies ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+}
+.hobbies li{
+  color: black;
+  background-color: rgb(157, 204, 56);
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  padding: 10px 20px;
+}
+.mascot{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  margin: 2rem;
+}
+.mascot img{
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 1rem;
+}
+
+.mascotlink{
+  text-decoration: none;
+  background-color: rgb(184, 72, 72);
+  color: aliceblue;
+  padding: 1rem;
+  font-size: 1rem;
+  border-color: antiquewhite;
+  border-style: solid;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+.mascotlink:hover{
+  background-color: rgb(36, 75, 62);
+}
+
+@media (max-width: 720px) {
+  .tools li {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+.tools ul{
+  padding: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+.hobbies ul{
+  gap: 10px;
+}
+.hobbies li{
+  font-size: 1rem;
+}
+.softwares li{
+  font-size: 1.2rem;
+}
 }
