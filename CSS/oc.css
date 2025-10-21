@@ -1,0 +1,28 @@
+body{
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+}
+.oc-table{
+    display: grid;
+  grid-template-columns: repeat(3,1fr); /* 3 คอลัมน์กว้าง 100px */
+  grid-template-rows: auto; /* ความสูงอัตโนมัติ */
+  gap: 0.2rem;
+  margin: 2rem 0.2rem;
+}
+.oc-table img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.oc-table > div{
+    background-color: white;
+}
+@media (max-width: 600px){
+    .oc-table{
+        grid-template-columns: repeat(2,1fr); 
+    }
+}

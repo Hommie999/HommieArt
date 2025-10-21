@@ -279,7 +279,71 @@
     max-width: 300px;
   }
 }
+/* -------------- */
+.option{
+  margin-top: 4rem;
+}
+.cms{
+  width: 400px;
+  height: 80px;
+  border: 2px solid #faffcb;
+  color: #d0f404;
+  border-radius: 1rem;
+  display: flex;
+  margin: 1.3rem auto;
+  justify-content: space-between;
+  padding: 0.7rem 1.5rem;
+  align-items: center;
+  gap: 3rem;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
 
+.cms h3{
+  text-decoration: none;
+  font-family: kanit;
+  color: #bced0b;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1.5px;
+  color: #64ddea;
+}
+
+.cms p{
+  margin: 0;
+  padding: 0;
+}
+.cms i{
+  font-size: 1.5rem;
+}
+
+.cms:hover{
+  transform: translateY(-5px);
+}
+
+.artwork {color: #8291f6;}
+.artwork h3 {color: #ef7ae7;}
+.oc{ color: #f99f04;}
+.oc h3{ color: #38ff49;}
+@media (min-width: 900px){
+  .cms{
+    padding: 1rem 3rem;
+    gap: 7rem;
+    width: 800px;
+  height: 100px;
+  }
+    .cms h3{
+          font-size: 2rem;
+    }
+    .cms p{
+      font-size: 1.2rem;
+    }
+  .cms i{
+  font-size: 2.5rem;
+}
+
+}
 /* lemon lord -----------------------------------------------------*/
 .content2 {
   max-width: 800px;
@@ -290,7 +354,7 @@
 
 .Lemonlord-container {
   display: flex;
-  padding: 17pt;
+  padding: 1rem;
   position: relative;
   flex-direction: column;
   align-items: center;
@@ -399,7 +463,7 @@
 }
 .content3,.content4{
   max-width: 1000px;
-  padding: 4.5vw;
+  padding: 1rem;
   margin: auto;
   align-items: center;
 }
