@@ -519,35 +519,6 @@
 document.addEventListener('aos:out', ({ detail }) => {
   console.log('animated out', detail);
 });
-// Lazy Loading---------------------------------------
-document.addEventListener("DOMContentLoaded", function () {
-  if (!('IntersectionObserver' in window)) return; // รองรับเบราว์เซอร์เก่า
-
-  const placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==';
-  const images = document.querySelectorAll('img:not([loading])'); // ไม่แตะรูปที่มี loading แล้ว
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;
-        img.removeAttribute('data-src');
-        img.classList.remove('lazy');
-        observer.unobserve(img);
-      }
-    });
-  });
-
-  images.forEach(img => {
-    // ข้ามรูปที่อาจเป็น icon หรือ inline SVG
-    if (img.src.startsWith('data:')) return;
-
-    img.dataset.src = img.src;
-    img.src = placeholder;
-    img.classList.add('lazy');
-    observer.observe(img);
-  });
-});
 
 // ขยายรูปภาพ หน้า cms--------------------------------------
 // เปิด Lightbox

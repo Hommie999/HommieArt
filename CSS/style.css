@@ -284,19 +284,19 @@
   margin-top: 4rem;
 }
 .cms{
-  width: 400px;
-  height: 80px;
+  width: auto;
+  height: auto;
   border: 2px solid #faffcb;
   color: #d0f404;
   border-radius: 1rem;
   display: flex;
-  margin: 1.3rem auto;
+  margin: 1.3rem 1rem;
   justify-content: space-between;
   padding: 0.7rem 1.5rem;
   align-items: center;
   gap: 3rem;
   text-decoration: none;
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .cms h3{
@@ -320,6 +320,7 @@
 
 .cms:hover{
   transform: translateY(-5px);
+  background-color: #a3ff1930;
 }
 
 .artwork {color: #8291f6;}
@@ -330,8 +331,8 @@
   .cms{
     padding: 1rem 3rem;
     gap: 7rem;
-    width: 800px;
-  height: 100px;
+    max-width: 1000px;
+    margin: 1.3rem auto;
   }
     .cms h3{
           font-size: 2rem;
@@ -392,7 +393,7 @@
 }
 
 .lemonlordcover:hover {
-   transform: scale(1.04); 
+transform: rotate3d(1, 1, 1, 20deg);
 }
 
 .tantan {

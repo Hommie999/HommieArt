@@ -24,16 +24,17 @@
     <h2>Hommie</h2>
     <h4>NARIDA POOLKAMLANG</h4>
     <p class="bd">🎂 1 มิถุนายน 2553</p>
-    <p class="itd">ชื่นชอบในการวาดภาพ ทำงานศิลปะ สนใจในการเขียนโปรแกรมเลยสร้างเว็ปไซต์นี้ขึ้นมา ตอนนี้เรียนอยู่มัธยมปลายแล้วแต่ก็ยังไม่ค่อยจะมีเพื่อน ใฝ่ฝันอยากมี Fandom เป็นของตัวเอง</p>
+    <p class="itd">ชื่นชอบในการวาดภาพ ทำงานศิลปะ สนใจในการเขียนโปรแกรมเลยสร้างเว็ปไซต์นี้ขึ้นมา ตอนนี้เรียนอยู่มัธยมปลายแล้วแต่ก็ยังเล่นโรบอก ใฝ่ฝันอยากมี Fandom เป็นของตัวเอง</p>
     <!-- softwares -->
     <h3>Softwares</h3>
     <hr>
     <div class="softwares">
         <ul>
             <li><a href="https://play.google.com/store/apps/details?id=jp.ne.ibis.ibispaintx.app&hl=th">Ibis Paint</a> : สำหรับงานวาดส่วนใหญ่</li>
-            <li><a href="https://www.clipstudio.net/th/">Clip Studio</a> : ใช้วาด Model Vtuber ในคอมแล้วก็ไม่ได้ใช้อีกเลย</li>
+            <li><a href="https://www.clipstudio.net/th/">Clip Studio</a> : ใช้วาด Model Vtuber ในคอมฯ</li>
             <li><a href="https://www.aseprite.org/">Aseprite</a> : สำหรับวาด Pixel art</li>
         </ul>
+        <p>สามารถกดที่ชื่อโปรแกรมเพื่อลิงค์ไปหน้าเว็ปไซต์ได้</p>
     </div>
     <!-- Tools -->
     <h3>Tools</h3>
@@ -65,11 +66,24 @@
     <h3>Mascot</h3>
     <hr>
     <div class="mascot">
-        <img src="image/OC/mascot/hommiecs.jpg" alt="">
+        <img src="image/OC/mascot/hommiecs.jpg"
+        onclick="openLightbox(this)"
+        class="thumbnail"
+        data-title="Mascot Hommie"
+        data-caption="ผมฟูยาวสีม่วง อย่าลืมจะงอยสองข้าง">
         <p class="itd">ทุกท่านสามารถใช้ตัวละครนี้เพื่อเป็นตัวแทนหนูได้</p>
  
     </div>
        <a class="mascotlink" href="OC-mascot.html">อ่านข้อมูลเพิ่มเติมเกี่ยวกับมาสคอต</a>
+
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close-btn" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" class="lightbox-img" />
+  <div id="lightbox-info" class="lightbox-info"></div>
+</div>
 
 </div>
 </main>
@@ -88,6 +102,63 @@
   <div style="text-align: center; font-size: 0.9em; color: #777;">
   © 2025 Hommie. All rights reserved.
   </div>
+
+  <!-- เสียง -->
+    <audio id="zoomInSound" src="audio/pop.mp3"></audio>
 </footer>
 </body>
 </html>
+<script>
+    // เปิด Lightbox
+function openLightbox(img) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxInfo = document.getElementById("lightbox-info");
+
+  // ใช้ src เดียวกัน (ไม่ต้องใช้ data-full อีกต่อไป)
+  lightboxImg.src = img.src;
+
+  // ดึง title และ caption จาก data attributes
+  const title = img.dataset.title || "";
+  const caption = img.dataset.caption || "";
+  const zoomInSound = document.getElementById('zoomInSound');
+
+  // สร้าง HTML สำหรับแสดงข้อมูล
+  let infoHTML = "";
+  if (title) {
+    infoHTML += `<div class="lightbox-title">${title}</div>`;
+  }
+  if (caption) {
+    infoHTML += `<div class="lightbox-caption">${caption}</div>`;
+  }
+
+  lightboxInfo.innerHTML = infoHTML;
+
+  // แสดง Lightbox
+  lightbox.style.display = "flex";
+  document.body.style.overflow = "hidden";
+    zoomInSound.currentTime = 0;
+    zoomInSound.play();
+}
+
+// ปิด Lightbox
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  lightbox.style.display = "none";
+  document.body.style.overflow = "";
+}
+
+// ปิดเมื่อกด Esc
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    closeLightbox();
+  }
+});
+
+// ปิดเมื่อกดที่พื้นหลัง (นอกภาพ)
+document.getElementById("lightbox").addEventListener("click", function(e) {
+  if (e.target === this) {
+    closeLightbox();
+  }
+});
+</script>
