@@ -190,10 +190,42 @@
     </div>
   </div>
  </main>
-  
 <!-- footer -->
 <footer>
-  <div class="mail-box"></div>
+  <div class="feedback-warpper">
+    <div class="feedback-section">
+      <i class="fa-solid fa-envelope ihead"></i>
+      <h3>Mailbox!</h3>
+      <h4>ส่งข้อความ ข้อคิดเห็น/ ข้อเสนอแนะถึงหนู</h4>
+      <form name="feedback" method="POST" data-netlify="true" action="/thank-you.html"></form>
+        <input type="hidden" name="form-name" value="feedback">
+        <input name="bot-field" type="hidden" />
+        <label>
+          ชื่อ :
+          <input type="text" name="name" placeholder="ใช้ชื่อนิรนามได้ เช่น คุณปลาวาฬ">
+        </label>
+
+        <label>
+          ข้อความ:
+          <textarea name="message" rows="4" placeholder="ส่งกำลังใจ คำแนะนำ ข้อเสนอแนะมาได้เลย" required></textarea>
+        </label>
+
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i> ส่งข้อความ</button>
+        <div class="remark">
+          <h5>หมายเหตุ</h5>
+            <p>
+              ข้อความที่ส่งจากในกล่องนี้อาจส่งถึงล่าช้า หากเร่งด่วนให้ติดต่อผ่านทางแพลตฟอร์มอื่นด้านล่าง
+            </p>
+        </div>
+        <img class="sticker" src="image/website-sticker/MiniHommie-GaiKai.png">
+      </form>
+      
+    </div>
+
+  </div>
+
+
+
   <!-- link -->
   <div class="social-links">
   <a href="https://x.com/Narida0" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
